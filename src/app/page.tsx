@@ -1,11 +1,13 @@
-import { Button } from "../components/ui/button";
+import { Container, Title } from "@/components/shared";
+
 
 const Home = () => {
   return (
-    <h1>
-      home
-      <Button variant="outline">Корзина</Button>
-    </h1>
+   <>
+   <Container className="mt-10">
+    <Title text = 'Еда' size = 'lg' className="font-extrabold"/>
+   </Container>
+   </>
   );
 };
 
