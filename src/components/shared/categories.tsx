@@ -5,26 +5,16 @@ import { FC } from "react";
 import { Container } from "./container";
 import { useCategoryStore } from "../../../store/category";
 
+import { useCategoryNav } from "../../../hooks/useCategory";
+
 interface Props {
   className?: string;
 }
 
-const cats = [
-  { id: 1, name: "Популярные" },
-  { id: 2, name: "Сеты" },
-  { id: 3, name: "Шашлык" },
-  { id: 4, name: "Шаурма" },
-  { id: 5, name: "Люля-кебаб" },
-  { id: 6, name: "Рыба" },
-  { id: 7, name: "Гарнир" },
-  { id: 8, name: "Салаты" },
-  { id: 9, name: "Выпечка" },
-  { id: 10, name: "Соусы" },
-  { id: 11, name: "Напитки" },
-];
-
 export const Categories: FC<Props> = ({ className }) => {
   const activeCategoryId = useCategoryStore((state) => state.activeId);
+  const { categories } = useCategoryNav();
+
   return (
     <div
       className={cn(
@@ -39,7 +29,7 @@ export const Categories: FC<Props> = ({ className }) => {
             className
           )}
         >
-          {cats.map(({ id, name }, index) => (
+          {categories.map(({ id, name }, index) => (
             <a
               className={cn(
                 "flex items-center font-bold h-10 rounded-2xl px-3",

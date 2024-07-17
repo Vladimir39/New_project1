@@ -22,15 +22,19 @@ export const ProductCard: FC<Props> = ({
   return (
     <div className={className}>
       <Link href={`/product/${id}`}>
-        <div className="flex justify-center p-6 bg-secondary rounded-lg h-[260px]">
-          <img className="w-[215px] h-[215px]" src={imageUrl} alt={name} />
+        <div className="flex justify-center bg-secondary rounded-lg h-[230px]">
+          <img
+            className="w-[290px] h-[215px] rounded-lg"
+            src={imageUrl}
+            alt={name}
+          />
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between h-[66px] ">
           <Title text={name} size="sm" className="mb-1 mt-3 font-bold" />
-          <div className="flex justify-between items-center">
+          {/* <div className="flex justify-between items-center">
             <Star size={15} />
             <b>100</b>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex justify-between items-center mt-4">
