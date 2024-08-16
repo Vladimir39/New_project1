@@ -1,11 +1,11 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 import { FC } from "react";
 import { Container } from "./container";
-import { useCategoryStore } from "../../../store/category";
+import { useCategoryStore } from "../../../shared/store/category";
 
-import { useCategoryNav } from "../../../hooks/useCategory";
+import { useCategoryNav } from "../../../shared/hooks/useCategory";
 
 interface Props {
   className?: string;

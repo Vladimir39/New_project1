@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 
@@ -18,7 +19,10 @@ export default function RootLayout({
         <link data-rh="true" rel="icon" href="/LOGO.svg" />
       </head>
       <body className={nunito.className}>
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen">
+          {children}
+          <Toaster />
+        </main>
       </body>
     </html>
   );

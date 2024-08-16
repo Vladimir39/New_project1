@@ -6,3 +6,8 @@ export { Title } from "./title";
 export { Categories } from "./categories";
 export { ProductCard } from "./product-card";
 export { ProductGroupList } from "./product-group-list";
+export { ChooseProductFrom } from "./choose-product-form";
+export { ProductSous } from "./product-sous";
+export { CartDrawer } from "./cart-drawer";
+export { ProductForm } from "./product-form";
+export * from "./modal";

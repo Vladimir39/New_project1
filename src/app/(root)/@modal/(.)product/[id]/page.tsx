@@ -1,8 +1,15 @@
+import { ChooseProductModal } from "../../../../../components/shared";
+
+import { notFound } from "next/navigation";
+
 export default async function ProductModalPage({
   params: { id },
 }: {
   params: { id: string };
 }) {
-  console.log(id);
-  return <h1>asdasdasdsadsa</h1>;
+  if (!id) {
+    return notFound();
+  }
+
+  return <ChooseProductModal id={id} />;
 }

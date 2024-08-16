@@ -1,4 +1,4 @@
-import { IMenu } from "../types/menu.types";
+import { IMenu } from "../shared/types/menu.types";
 import { axiosInstance } from "./instance";
 
 export const getAll = async (): Promise<IMenu[]> => {

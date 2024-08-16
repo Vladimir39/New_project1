@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 import { FC } from "react";
 import Image from "next/image";
 import { Container } from "./container";
@@ -6,11 +6,13 @@ import { CartButton } from "./cartButton";
 import { CallButtonTel } from "./callBattonTel";
 import Link from "next/link";
 
+
 interface Props {
   className?: string;
 }
 
 export const Header: FC<Props> = ({ className }) => {
+
   return (
     <header className={cn("border border-b", className)}>
       <Container className="flex items-center justify-between py-8">

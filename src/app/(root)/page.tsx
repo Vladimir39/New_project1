@@ -5,8 +5,8 @@ import {
   Container,
   ProductGroupList,
   Title,
-} from "@/components/shared";
-import { useCategoryNav } from "../../../hooks/useCategory";
+} from "../../components/shared";
+import { useCategoryNav } from "../../../shared/hooks/useCategory";
 
 const Home = () => {
   const { categories } = useCategoryNav();

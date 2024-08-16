@@ -8,6 +8,7 @@ interface ReturnProps {
 
 export const useProductItems = (): ReturnProps => {
   const [product, setProduct] = useState<IProduct[]>([]);
+
   useEffect(() => {
     async function fetchProduct() {
       try {
