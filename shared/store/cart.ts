@@ -70,7 +70,6 @@ export const useCartStore = create<CartState>((set, get) => ({
     try {
       set({ loading: true, error: false });
       const data = await Api.cart.addCartItem(values);
-      console.log(data);
 
       if (data.token) {
         Cookies.set("cartToken", data.token);

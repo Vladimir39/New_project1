@@ -4,7 +4,7 @@ import { axiosInstance } from "./instance";
 
 export const getCart = async (): Promise<Cart> => {
   const token = await Cookies.get("cartToken");
-  console.log(token);
+
   return (
     await axiosInstance.get<Cart>("/cart", {
       headers: {
@@ -19,7 +19,7 @@ export const updateItemQuantity = async (
   quantity: number
 ): Promise<Cart> => {
   const token = await Cookies.get("cartToken");
-  console.log(token);
+
   return (
     await axiosInstance.patch<Cart>(
       "/cart/" + id,
@@ -35,7 +35,7 @@ export const updateItemQuantity = async (
 
 export const removeCartItem = async (id: number) => {
   const token = await Cookies.get("cartToken");
-  console.log(token);
+
   return (
     await axiosInstance.delete<Cart>("/cart/" + id, {
       headers: {
@@ -49,7 +49,7 @@ export const addCartItem = async (
   values: CreateCartItemValues
 ): Promise<Cart> => {
   const token = await Cookies.get("cartToken");
-  console.log(token);
+
   const headers: Record<string, string> = {};
 
   if (token) {

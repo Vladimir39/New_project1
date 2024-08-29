@@ -2,7 +2,6 @@ import { cn } from "@/lib/utils";
 
 interface Props {
   name: string;
-
   details: string;
   className?: string;
 }

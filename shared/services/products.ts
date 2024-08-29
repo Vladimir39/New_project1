@@ -1,4 +1,4 @@
-import { IProduct } from "../shared/types/product.types";
+import { IProduct } from "../../shared/types/product.types";
 import { axiosInstance } from "./instance";
 
 const PRODUCTS = "products";

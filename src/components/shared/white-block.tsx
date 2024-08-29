@@ -1,9 +1,9 @@
 import { cn } from "@/lib/utils";
-import React, { FC } from "react";
+import { FC } from "react";
 import { Title } from "./title";
 
 interface Props {
-  title: string;
+  title?: string;
   endAdornment?: React.ReactNode;
   className?: string;
   contentClassName?: string;
@@ -24,9 +24,7 @@ export const WhiteBlock: FC<React.PropsWithChildren<Props>> = ({
           {endAdornment}
         </div>
       )}
-      <div className={cn('px-5 py-4', contentClassName)}>{children}</div>
+      <div className={cn("px-5 py-4", contentClassName)}>{children}</div>
     </div>
   );
 };
-
-

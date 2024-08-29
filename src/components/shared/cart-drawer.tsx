@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import Image from "next/image";
 
 import {
@@ -15,36 +15,14 @@ import { Button } from "../ui";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { CartDrawerItem } from "./cart-drawer-item";
-import { useCartStore } from "../../../shared/store/cart";
 import { getCartIngredients } from "@/lib/get-cart-ingredients";
 import { Title } from "./title";
 import { cn } from "@/lib/utils";
+import { useCart } from "../../../shared/hooks/useCart";
 
-interface Props {
-  className?: string;
-}
-
-export const CartDrawer: FC<React.PropsWithChildren<Props>> = ({
-  children,
-  className,
-}) => {
-  const [
-    totalAmount,
-    fetchCartItems,
-    updateItemQuantity,
-    removeCartItem,
-    items,
-  ] = useCartStore((state) => [
-    state.totalAmount,
-    state.fetchCartItems,
-    state.updateItemQuantity,
-    state.removeCartItem,
-    state.items,
-  ]);
-
-  useEffect(() => {
-    fetchCartItems();
-  }, []);
+export const CartDrawer: FC<React.PropsWithChildren> = ({ children }) => {
+  const { totalAmount, updateItemQuantity, items, removeCartItem } = useCart();
+  const [redirecting, setRedirecting] = React.useState(false);
 
   const onClickCountButton = (
     id: number,
@@ -133,8 +111,13 @@ export const CartDrawer: FC<React.PropsWithChildren<Props>> = ({
 
                     <span className="font-bold text-lg">{totalAmount}</span>
                   </div>
-                  <Link href="/cart">
-                    <Button type="submit" className="w-full h-12 text-base">
+                  <Link href="/checkout">
+                    <Button
+                      onClick={() => setRedirecting(true)}
+                      loading={redirecting}
+                      type="submit"
+                      className="w-full h-12 text-base"
+                    >
                       Оформить заказ
                       <ArrowRight className="w-5 ml-2" />
                     </Button>
