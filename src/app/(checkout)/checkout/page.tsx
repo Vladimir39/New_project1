@@ -33,7 +33,7 @@ const page = () => {
     },
   });
   const onSubmit = (data: CheckoutFormValues) => {
-    fetchOrdersPost(data.address);
+    fetchOrdersPost(data);
     console.log(data);
   };
   const onClickCountButton = (
