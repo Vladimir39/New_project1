@@ -21,10 +21,10 @@ export const useCreateOrdersPost = create<OrderState>((set, get) => ({
 
   fetchOrdersPost: async (address) => {
     try {
-      console.log(address);
+     
       set({ loading: false, error: false });
       const data = await Api.orders.createOrdersPost(address);
-      console.log(data);
+
       //set();
     } catch (error) {
       console.log(error);

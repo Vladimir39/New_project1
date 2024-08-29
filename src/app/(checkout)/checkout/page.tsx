@@ -15,8 +15,11 @@ import {
   CheckoutFormValues,
 } from "@/components/shared/checkout/checkout-form-schema";
 import { useCreateOrdersPost } from "../../../../shared/store/orders";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
 const page = () => {
+  const [submitting, setSubmitting] = useState(false);
   const { totalAmount, updateItemQuantity, items, removeCartItem, loading } =
     useCart();
   const { fetchOrdersPost } = useCreateOrdersPost();
@@ -32,9 +35,23 @@ const page = () => {
       comment: "",
     },
   });
-  const onSubmit = (data: CheckoutFormValues) => {
-    fetchOrdersPost(data);
-    console.log(data);
+  const onSubmit = async (data: CheckoutFormValues) => {
+
+    try {
+      setSubmitting(true)
+      await fetchOrdersPost(data);
+      console.log(data)
+      toast.error('Заказ успешно оформлен! 📝 Переход на оплату... ', {
+        icon: '✅',
+      });
+    } catch (err) {
+      console.log(err);
+      setSubmitting(false);
+      toast.error('Не удалось создать заказ', {
+        icon: '❌',
+      });
+    }
+
   };
   const onClickCountButton = (
     id: number,

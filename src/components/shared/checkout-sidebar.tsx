@@ -1,8 +1,9 @@
 import React, { FC } from "react";
 import { WhiteBlock } from "./white-block";
 import { Button, Skeleton } from "../ui";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight} from "lucide-react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 interface Props {
   totalAmount: number;
@@ -31,10 +32,15 @@ export const CheckoutSidebar: FC<Props> = ({
         <span>Стоимость товара</span>
       </div>
       <Button
+        // asChild
+        loading={loading}
         type="submit"
         className="w-full h-14 rounded-2xl mt-6 text-base font-bold"
       >
+
         Перейти к оплате
+        
+
         <ArrowRight className="w-5 ml-2" />
       </Button>
     </WhiteBlock>
