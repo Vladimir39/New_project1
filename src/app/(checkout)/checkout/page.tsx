@@ -36,22 +36,24 @@ const page = () => {
     },
   });
   const onSubmit = async (data: CheckoutFormValues) => {
-
     try {
-      setSubmitting(true)
-      await fetchOrdersPost(data);
-      console.log(data)
-      toast.error('Заказ успешно оформлен! 📝 Переход на оплату... ', {
-        icon: '✅',
+      setSubmitting(true);
+      const url = await fetchOrdersPost(data);
+      console.log(url);
+      toast.error("Заказ успешно оформлен! 📝 Переход на оплату... ", {
+        icon: "✅",
       });
+
+      if (url) {
+        location.href = url;
+      }
     } catch (err) {
       console.log(err);
       setSubmitting(false);
-      toast.error('Не удалось создать заказ', {
-        icon: '❌',
+      toast.error("Не удалось создать заказ", {
+        icon: "❌",
       });
     }
-
   };
   const onClickCountButton = (
     id: number,
@@ -91,7 +93,10 @@ const page = () => {
             {/* Правая часть */}
 
             <div className="w-[450px]">
-              <CheckoutSidebar totalAmount={totalAmount} loading={loading} />
+              <CheckoutSidebar
+                totalAmount={totalAmount}
+                loading={loading || submitting}
+              />
             </div>
           </div>
         </form>
