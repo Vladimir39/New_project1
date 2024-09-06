@@ -38,15 +38,17 @@ const page = () => {
   const onSubmit = async (data: CheckoutFormValues) => {
     try {
       setSubmitting(true);
-      const url = await fetchOrdersPost(data);
-      console.log(url);
-      toast.error("Заказ успешно оформлен! 📝 Переход на оплату... ", {
+      const order = await fetchOrdersPost(data);
+      console.log(order);
+      toast.error(`Заказ успешно оформлен! \n 📝 Ваш заказ ${order?.count}`, {
         icon: "✅",
       });
 
-      if (url) {
-        location.href = url;
-      }
+      setTimeout(() => {
+        if (order) {
+          location.href = order.url;
+        }
+      }, 3000);
     } catch (err) {
       console.log(err);
       setSubmitting(false);
