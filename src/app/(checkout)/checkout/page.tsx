@@ -6,7 +6,7 @@ import { CheckoutSidebar, Container, Title } from "@/components/shared";
 import { useCart } from "../../../../shared/hooks/useCart";
 
 import {
-  CheckoutAddressForm,
+  CheckoutButtonAddress,
   CheckoutCart,
   CheckoutPersonalForm,
 } from "@/components/shared/checkout";
@@ -35,6 +35,7 @@ const page = () => {
       comment: "",
     },
   });
+
   const onSubmit = async (data: CheckoutFormValues) => {
     try {
       setSubmitting(true);
@@ -88,7 +89,7 @@ const page = () => {
                 className={loading ? "opacity-40 pointer-events-none" : ""}
               />
 
-              <CheckoutAddressForm
+              <CheckoutButtonAddress
                 className={loading ? "opacity-40 pointer-events-none" : ""}
               />
             </div>

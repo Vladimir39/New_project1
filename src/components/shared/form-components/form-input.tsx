@@ -29,6 +29,7 @@ export const FormInput: FC<Props> = ({
   } = useFormContext();
   const value = watch(name);
   const errorText = errors[name]?.message as string;
+  console.log(errorText);
 
   const onClickClear = () => {
     setValue(name, "", { shouldValidate: true });

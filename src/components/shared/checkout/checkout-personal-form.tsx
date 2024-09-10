@@ -1,7 +1,5 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { WhiteBlock } from "../white-block";
-
-import { Input } from "@/components/ui";
 import { FormInput } from "../form-components";
 
 interface Props {
