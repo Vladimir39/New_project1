@@ -1,4 +1,4 @@
-import { Header } from "../../components/shared";
+import { Footer, Header } from "../../components/shared";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,10 +13,11 @@ export default function HomeLayout({
   modal: React.ReactNode;
 }>) {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen flex flex-col">
       <Header />
       {children}
       {modal}
+      <Footer className="text-white" />
     </main>
   );
 }

@@ -6,14 +6,12 @@ import { CartButton } from "./cartButton";
 import { CallButtonTel } from "./callBattonTel";
 import Link from "next/link";
 
-
 interface Props {
   className?: string;
-  hasCart: boolean
+  hasCart?: boolean;
 }
 
 export const Header: FC<Props> = ({ className, hasCart = true }) => {
-
   return (
     <header className={cn("border-b", className)}>
       <Container className="flex items-center justify-between py-8">
@@ -33,7 +31,7 @@ export const Header: FC<Props> = ({ className, hasCart = true }) => {
         </Link>
 
         <CallButtonTel />
-        {hasCart&&<CartButton />}
+        {hasCart && <CartButton />}
       </Container>
     </header>
   );

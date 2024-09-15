@@ -17,7 +17,7 @@ const Home = () => {
         <Title text="Все для вас" size="lg" className="font-extrabold" />
       </Container>
       <Categories />
-      <Container className="mt-10">
+      <Container className="mt-10 flex-auto">
         <div className="flex flex-col gap-16">
           {categories.map(
             (category) =>

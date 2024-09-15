@@ -1,4 +1,4 @@
-import { Container, Header } from "../../components/shared";
+import { Container, Footer, Header } from "../../components/shared";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

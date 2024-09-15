@@ -10,15 +10,16 @@ interface Props {
   name: string[];
   label?: string;
   required?: boolean;
+  active: string;
   className?: string;
 }
 
 export const FormRadioGroup: FC<Props> = ({
   className,
   name,
+  active,
   label,
   required,
-  ...props
 }) => {
   const {
     register,
@@ -26,14 +27,15 @@ export const FormRadioGroup: FC<Props> = ({
     watch,
     setValue,
   } = useFormContext();
-  const [active, setActive] = useState<string | null>(null);
+  const [activePoint, setActivePoint] = useState<string | null>(null);
 
   const errorText = errors["address"]?.message as string;
   console.log(errorText);
 
   const activeHandler = (type: string) => {
+    console.log(type);
     setValue("address", type, { shouldValidate: true });
-    setActive(type);
+    setActivePoint(type);
   };
 
   return (
@@ -44,7 +46,7 @@ export const FormRadioGroup: FC<Props> = ({
             <RadioGroupItem
               value={name}
               id={name}
-              className={`${active === name ? "border-red-500" : " "}`}
+              className={`${activePoint === name ? "border-red-500" : " "}`}
               onClick={() => activeHandler(name)}
               {...register("address")}
             />

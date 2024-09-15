@@ -8,7 +8,7 @@ interface Props {
 
 export const CallButtonTel: FC<Props> = ({ className }) => {
   return (
-    <div>
+    <div className={className}>
       <div className="flex gap-2">
         <Smartphone size={25} />
         <ul className="flex gap-3">

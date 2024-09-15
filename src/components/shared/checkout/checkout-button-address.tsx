@@ -4,6 +4,7 @@ import { CheckoutPickupAddress } from "../checkout-pickup-address";
 import React, { FC } from "react";
 import { CheckoutAddressForm } from "./checkout-address-form";
 import { CheckoutPickupForm } from "./checkout-pickup-form";
+import { useFormContext } from "react-hook-form";
 
 interface Props {
   className?: string;
@@ -11,8 +12,9 @@ interface Props {
 
 export const CheckoutButtonAddress: FC<Props> = ({ className }) => {
   const [active, setActive] = useState<"delivery" | "pickup">("delivery");
-
+  const { setValue } = useFormContext();
   const activeChangeHandler = (type: "delivery" | "pickup") => {
+    setValue("address", "");
     setActive(type);
   };
 
