@@ -4,29 +4,53 @@ import { useProductID } from "../../../shared/hooks/useProductID";
 import { ChooseProductFrom } from "./choose-product-form";
 import { useCartStore } from "../../../shared/store/cart";
 import toast from "react-hot-toast";
+import { ChooseProductSlugForm } from "./choose-product-slug-form";
 
 interface Props {
+  slugProduct?: boolean;
+  onSubmit?: VoidFunction;
   id: string;
 }
-export const ProductForm: FC<Props> = ({ id }) => {
+export const ProductForm: FC<Props> = ({
+  id,
+  onSubmit: _onSubmit,
+  slugProduct,
+}) => {
   const { productID } = useProductID({ id });
   const [addCartItem, loading] = useCartStore((state) => [
     state.addCartItem,
     state.loading,
   ]);
 
-  const onAddProduct = async (productID: number, ingredients: number[]) => {
+  const onSubmit = async (productID: number, ingredients: number[]) => {
     try {
       addCartItem({
         productId: productID,
         ingredient: ingredients,
       });
+
+      _onSubmit?.();
+
       toast.success("Продукт добавлен в корзину");
     } catch (error) {
       toast.error("Не удалось добавить продукт в корзину");
       console.log(error);
     }
   };
+
+  if (slugProduct) {
+    return (
+      <ChooseProductSlugForm
+        name={productID?.name}
+        images={productID?.images}
+        price={productID?.price}
+        ingredients={productID?.ingredients}
+        description={productID?.id}
+        onSubmit={onSubmit}
+        loading={loading}
+      />
+    );
+  }
 
   return (
     <ChooseProductFrom
@@ -35,7 +59,7 @@ export const ProductForm: FC<Props> = ({ id }) => {
       price={productID?.price}
       ingredients={productID?.ingredients}
       description={productID?.id}
-      onSubmit={onAddProduct}
+      onSubmit={onSubmit}
       loading={loading}
     />
   );

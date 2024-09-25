@@ -13,8 +13,8 @@ export default function HomeLayout({
   modal: React.ReactNode;
 }>) {
   return (
-    <main className="min-h-screen flex flex-col">
-      <Header />
+    <main className="min-h-screen flex flex-col ">
+      <Header className="max-xl:px-5" />
       {children}
       {modal}
       <Footer className="text-white" />

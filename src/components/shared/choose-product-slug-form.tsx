@@ -1,11 +1,11 @@
-import { cn } from "../../lib/utils";
+import { cn } from "@/lib/utils";
 import React, { FC } from "react";
-import { Title } from "./title";
-import { Button } from "../ui";
 import { ProductSous } from "./product-sous";
-import { Iingredients } from "../../../shared/types/Ingredient.types";
+
+import { Button } from "../ui";
 import { useSet } from "react-use";
 import { calcProductPrices } from "@/lib/calc-Product-Prices";
+import { Title } from "./title";
 
 interface Props {
   name?: string;
@@ -17,8 +17,7 @@ interface Props {
   onSubmit: (productID: number, ingredients: number[]) => void;
   className?: string;
 }
-
-export const ChooseProductFrom: FC<Props> = ({
+export const ChooseProductSlugForm: FC<Props> = ({
   className,
   name,
   images,
@@ -44,7 +43,7 @@ export const ChooseProductFrom: FC<Props> = ({
 
   return (
     <div className={cn("flex flex-1", className)}>
-      <div className="flex justify-center items-center flex-1 relative w-full bg-[#131313]">
+      <div className="flex justify-center items-center flex-1 relative w-full bg-zinc-700">
         <img
           src={images}
           width={550}
@@ -52,17 +51,21 @@ export const ChooseProductFrom: FC<Props> = ({
           className="relative translate-all z-10 duration-300 "
         />
       </div>
-
-      <div className="w-[510px] bg-[#f7f6f5] p-7 max-lg:w-[400px]">
+      <div className="w-[700px] p-7">
         <Title text={name} size="md" className="font-extrabold mb-1" />
         <span className="font-bold">Цена: {price} ₽</span>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat ea
+          tenetur dolorum blanditiis incidunt, voluptatibus iste hic enim, optio
+          vitae quas, vero id rem neque pariatur. Sint quae repudiandae optio?
+        </p>
         <Title
           text="Добавить к блюду"
           size="xs"
-          className="font-extrabold mt-5"
+          className="font-extrabold mt-12"
         />
-        <div className="bg-gray-50 p-5 rounded-md h-[420px] overflow-auto scrollbar mt-1">
-          <div className="grid grid-cols-3 gap-3 max-lg:grid-cols-2">
+        <div className="p-5 rounded-md h-[400px] overflow-auto scrollbar mt-1">
+          <div className="grid grid-cols-4 gap-10">
             {ingredients?.map((item, index) => (
               <ProductSous
                 key={index}

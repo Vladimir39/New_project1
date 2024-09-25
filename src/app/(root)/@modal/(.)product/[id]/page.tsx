@@ -1,15 +1,26 @@
+"use client";
+
+import { ChooseProductAdaptivModule } from "@/components/shared/adaptive";
 import { ChooseProductModal } from "../../../../../components/shared";
 
 import { notFound } from "next/navigation";
+import { useState } from "react";
 
-export default async function ProductModalPage({
+export default function ProductModalPage({
   params: { id },
 }: {
   params: { id: string };
 }) {
+  const modal =
+    window.innerWidth < 768 ? (
+      <ChooseProductAdaptivModule id={id} />
+    ) : (
+      <ChooseProductModal id={id} />
+    );
+
   if (!id) {
     return notFound();
   }
 
-  return <ChooseProductModal id={id} />;
+  return modal;
 }

@@ -27,7 +27,8 @@ export const CheckoutCart: FC<Props> = ({
   return (
     <WhiteBlock title="1. Корзина" className={className}>
       <div className="flex flex-col gap-5">
-        {loading &&
+        {items.length === 0 &&
+          loading &&
           [...Array(4)].map((_, index) => <CheckoutItemSkeleton key={index} />)}
 
         {items.map((item) => (

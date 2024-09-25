@@ -38,7 +38,12 @@ export const ProductGroupList: FC<Props> = ({
     <div className={className} id={title} ref={intersectionRef}>
       <Title text={title} size="lg" className="font-extrabold mb-5" />
 
-      <div className={cn("grid grid-cols-4 gap-[50px]", listClassName)}>
+      <div
+        className={cn(
+          "grid grid-cols-1 gap-[50px] sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4",
+          listClassName
+        )}
+      >
         {items.map((product, i) => (
           <ProductCard
             key={product.id}

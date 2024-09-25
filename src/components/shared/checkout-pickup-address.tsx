@@ -21,8 +21,8 @@ export const CheckoutPickupAddress: FC<Props> = ({
     <div
       onClick={onClick}
       className={cn(
-        `border cursor-pointer bg-zinc-200 ${
-          isActive ? "bg-white" : ""
+        `border cursor-pointer bg-white ${
+          isActive ? "bg-primary text-white" : ""
         } hover:bg-red-500 hover:text-white`,
         className
       )}

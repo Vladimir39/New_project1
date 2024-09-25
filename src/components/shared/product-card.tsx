@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { FC } from "react";
 import { Title } from "./title";
 import { Button } from "../ui";
-import { Plus, Star } from "lucide-react";
+import { Plus } from "lucide-react";
 
 interface Props {
   id: number;

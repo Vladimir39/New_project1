@@ -10,8 +10,8 @@ export default async function ProductPage({
     return notFound();
   }
   return (
-    <Container className="flex flex-col my-10">
-      <ProductForm id={id} />
+    <Container className="my-10">
+      <ProductForm id={id} slugProduct={true} />
     </Container>
   );
 }

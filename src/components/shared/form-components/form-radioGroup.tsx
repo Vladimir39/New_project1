@@ -8,23 +8,13 @@ import { ErrorText } from "../error-text";
 
 interface Props {
   name: string[];
-  label?: string;
-  required?: boolean;
-  active: string;
   className?: string;
 }
 
-export const FormRadioGroup: FC<Props> = ({
-  className,
-  name,
-  active,
-  label,
-  required,
-}) => {
+export const FormRadioGroup: FC<Props> = ({ name }) => {
   const {
     register,
     formState: { errors },
-    watch,
     setValue,
   } = useFormContext();
   const [activePoint, setActivePoint] = useState<string | null>(null);

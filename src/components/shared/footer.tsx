@@ -13,20 +13,20 @@ interface Props {
 export const Footer: FC<Props> = ({ className }) => {
   return (
     <footer className={cn("border-t mt-10 bg-black h-50", className)}>
-      <Container className="py-8">
-        <div className="flex justify-between mb-6">
+      <Container className="py-8 px-5 xl:px-0">
+        <div className=" mb-6  lg:flex justify-between">
           <Title
-            size="lg"
+            size="sm"
             text="ДЫМ ШАШЛЫК"
-            className="border-r border-zinc-600 pr-[4rem] text-center tracking-widest font-bold pt-6"
+            className=" border-zinc-600 text-center tracking-widest font-bold mb-10 xl:text-3xl xl:border-r lg:pt-6 xl:pr-[6rem]"
           />
-          <div className="grid grid-cols-2 gap-56">
+          <div className="gap-56 md:grid grid-cols-2 ">
             <div>
               <ul>
                 {contact.items.map((item) => (
                   <li
                     key={item.title}
-                    className="text-xs text-neutral-400 leading-5"
+                    className="text-xs text-neutral-400 leading-5  md:text-left"
                   >
                     <Link href={item.link}>{item.title}</Link>
                   </li>

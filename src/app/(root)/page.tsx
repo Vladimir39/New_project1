@@ -27,6 +27,7 @@ const Home = () => {
                   title={category.name}
                   categoryId={category.id}
                   items={category.products}
+                  className="drop-shadow-md"
                 />
               )
           )}

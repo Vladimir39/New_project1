@@ -1,4 +1,5 @@
 import { DataFooter } from "../types/footerData.types";
+import { Instagram } from "lucide-react";
 
 export const firstFooterMenu: DataFooter = {
   title: "Дым шашлык",
