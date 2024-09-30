@@ -42,8 +42,8 @@ export const ChooseProductSlugForm: FC<Props> = ({
   };
 
   return (
-    <div className={cn("flex flex-1", className)}>
-      <div className="flex justify-center items-center flex-1 relative w-full bg-zinc-700">
+    <div className={cn("flex flex-1 max-md:block", className)}>
+      <div className="flex justify-center items-center flex-1 relative w-full max-sm:px-4">
         <img
           src={images}
           width={550}
@@ -51,7 +51,7 @@ export const ChooseProductSlugForm: FC<Props> = ({
           className="relative translate-all z-10 duration-300 "
         />
       </div>
-      <div className="w-[700px] p-7">
+      <div className="max-w-[700px] p-7 max-xl:max-w-[500px] max-lg:max-w-[400px] max-md:max-w-[600px]">
         <Title text={name} size="md" className="font-extrabold mb-1" />
         <span className="font-bold">Цена: {price} ₽</span>
         <p>
@@ -64,8 +64,8 @@ export const ChooseProductSlugForm: FC<Props> = ({
           size="xs"
           className="font-extrabold mt-12"
         />
-        <div className="p-5 rounded-md h-[400px] overflow-auto scrollbar mt-1">
-          <div className="grid grid-cols-4 gap-10">
+        <div className="p-5 rounded-md h-[400px] overflow-auto scrollbar mt-1 max-xl:h-[470px] max-lg:h-[600px] max-md:h-[470px]">
+          <div className="grid grid-cols-4 gap-3 max-xl:grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-3">
             {ingredients?.map((item, index) => (
               <ProductSous
                 key={index}

@@ -12,10 +12,9 @@ export default function CheckoutLayout({
 }) {
   return (
     <main className="min-h-screen bg-[#F4F1EE]">
-      <Container>
-        <Header hasCart={false} className="border-b-gray-200" />
-        {children}
-      </Container>
+      <Header hasCart={false} className="border-b-gray-200" />
+      <Container>{children}</Container>
+      <Footer className="text-white" />
     </main>
   );
 }

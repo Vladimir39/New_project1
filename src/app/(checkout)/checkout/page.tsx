@@ -75,7 +75,7 @@ const page = () => {
 
       <FormProvider {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
-          <div className="flex gap-10">
+          <div className="flex gap-10 max-xl:p-2 max-lg:block">
             {/* Левая часть */}
             <div className="flex flex-col gap-10 flex-1 mb-20">
               <CheckoutCart
@@ -95,7 +95,7 @@ const page = () => {
             </div>
             {/* Правая часть */}
 
-            <div className="w-[450px]">
+            <div className="w-[450px] max-xl:w-[400px] max-lg:w-full">
               <CheckoutSidebar
                 totalAmount={totalAmount}
                 loading={loading || submitting}

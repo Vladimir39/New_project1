@@ -4,7 +4,6 @@ import { ChooseProductAdaptivModule } from "@/components/shared/adaptive";
 import { ChooseProductModal } from "../../../../../components/shared";
 
 import { notFound } from "next/navigation";
-import { useState } from "react";
 
 export default function ProductModalPage({
   params: { id },

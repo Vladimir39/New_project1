@@ -39,7 +39,7 @@ export const CheckoutItem: FC<Props> = ({
         />
         <button onClick={onClickRemove}>
           <X
-            className="text-gray-400 cursor-pointer hover:text-gray-600"
+            className="text-gray-200 cursor-pointer hover:text-gray-400"
             size={20}
           />
         </button>
