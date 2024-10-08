@@ -4,7 +4,6 @@ import {
   Categories,
   Container,
   ProductGroupList,
-  Title,
 } from "../../components/shared";
 import { useCategoryNav } from "../../../shared/hooks/useCategory";
 
@@ -13,10 +12,7 @@ const Home = () => {
 
   return (
     <>
-      <Container className="mt-5">
-        <Title text="Все для вас" size="lg" className="font-extrabold" />
-      </Container>
-      <Categories />
+      {/* <Categories /> */}
       <Container className="mt-10 flex-auto">
         <div className="flex flex-col gap-16">
           {categories.map(

@@ -9,11 +9,13 @@ import { ChooseProductSlugForm } from "./choose-product-slug-form";
 interface Props {
   slugProduct?: boolean;
   onSubmit?: VoidFunction;
+  close: () => void;
   id: string;
 }
 export const ProductForm: FC<Props> = ({
   id,
   onSubmit: _onSubmit,
+  close,
   slugProduct,
 }) => {
   const { productID } = useProductID({ id });
@@ -30,6 +32,7 @@ export const ProductForm: FC<Props> = ({
       });
 
       _onSubmit?.();
+      close();
 
       toast.success("Продукт добавлен в корзину");
     } catch (error) {

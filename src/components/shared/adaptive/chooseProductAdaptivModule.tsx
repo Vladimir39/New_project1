@@ -23,7 +23,11 @@ export const ChooseProductAdaptivModule: React.FC<Props> = ({
       <DrawerContent
         className={cn("p-0 h-svh bg-white overflow-hidden", className)}
       >
-        <ProductFormAdaptiv id={id} onSubmit={() => router.back()} />
+        <ProductFormAdaptiv
+          id={id}
+          onSubmit={() => router.back()}
+          close={() => router.back()}
+        />
       </DrawerContent>
     </Drawer>
   );

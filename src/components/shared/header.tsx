@@ -5,7 +5,7 @@ import { Container } from "./container";
 import { CartButton } from "./cartButton";
 import { CallButtonTel } from "./callBattonTel";
 import Link from "next/link";
-import { BurgerInfo, BurgerModal } from "./adaptive";
+import { BurgerModal } from "./adaptive";
 
 interface Props {
   className?: string;

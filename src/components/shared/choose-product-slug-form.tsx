@@ -25,6 +25,7 @@ export const ChooseProductSlugForm: FC<Props> = ({
   ingredients,
   description,
   loading,
+
   onSubmit,
 }) => {
   const [selectedIngredients, { toggle: addIngredient }] = useSet(

@@ -44,9 +44,6 @@ export const ChooseProductFromAdaptiv: FC<Props> = ({
 
   return (
     <div className={cn("px-6 static", className)}>
-      <div className="absolute top-2 left-2 border w-[35px] h-[35px] drop-shadow-md rounded-[18px] z-50 bg-white">
-        <ChevronDown className="m-auto mt-1" />
-      </div>
       <div className="h-5/6 overflow-auto scrollbar pb-24 ">
         <div className="m-auto mb-6 max-w-[300px]  bg-[#131313]">
           <img
