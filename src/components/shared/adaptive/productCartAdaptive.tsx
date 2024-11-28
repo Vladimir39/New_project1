@@ -21,7 +21,7 @@ export const ProductCardAdaptive: FC<Props> = ({
   className,
 }) => {
   return (
-    <div className={className}>
+    <article className={className}>
       <Link href={`/product/${id}`}>
         <div className="flex">
           <div className="flex rounded-lg ">
@@ -44,6 +44,6 @@ export const ProductCardAdaptive: FC<Props> = ({
         </div>
       </Link>
       <hr className="mt-5" />
-    </div>
+    </article>
   );
 };

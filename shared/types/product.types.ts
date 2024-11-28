@@ -1,3 +1,5 @@
+import { Iingredients } from "./Ingredient.types";
+
 export interface IProduct {
   id: number;
   name: string;
@@ -14,10 +16,5 @@ export interface IProduct {
   };
   popular: boolean;
   countPopular: string;
-  ingredients: {
-    id: number;
-    name: string;
-    imageUrl: string;
-    price: number;
-  };
+  ingredients: Iingredients[];
 }

@@ -1,19 +1,36 @@
 "use client";
 
 import { cn } from "../../lib/utils";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { Container } from "./container";
 import { useCategoryStore } from "../../../shared/store/category";
-
 import { useCategoryNav } from "../../../shared/hooks/useCategory";
+import { CartButton } from "./cartButton";
 
 interface Props {
   className?: string;
+  hasCart?: boolean;
 }
 
-export const Categories: FC<Props> = ({ className }) => {
+export const Categories: FC<Props> = ({ className, hasCart = true }) => {
   const activeCategoryId = useCategoryStore((state) => state.activeId);
   const { categories } = useCategoryNav();
+
+  // ПОПРАВИТЬ, ЧТОБЫ БЫЛО ЛУЧШЕ НАПИСАНО
+  const x = [""];
+
+  categories.map((item) => x.push(item.name));
+
+  useEffect(() => {
+    const activeLink = document.querySelector(
+      `a[href="/#${x[activeCategoryId]}"]`
+    );
+    activeLink?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+  }, [activeCategoryId]);
 
   return (
     <div
@@ -22,10 +39,10 @@ export const Categories: FC<Props> = ({ className }) => {
         className
       )}
     >
-      <Container>
+      <Container className="flex justify-between gap-2 max-xl:ml-5 ">
         <div
           className={cn(
-            "inline-flex gap-1 bg-gray-50 p-1 rounded-2xl ",
+            "inline-flex gap-1 bg-gray-50 p-1 rounded-2xl hidden-scrollbar",
             className
           )}
         >
@@ -39,10 +56,13 @@ export const Categories: FC<Props> = ({ className }) => {
               href={`/#${name}`}
               key={index}
             >
-              <button className={cn("text-sm", className)}>{name}</button>
+              <button className={cn("text-sm whitespace-nowrap", className)}>
+                {name}
+              </button>
             </a>
           ))}
         </div>
+        {hasCart && <CartButton className="h-12" />}
       </Container>
     </div>
   );

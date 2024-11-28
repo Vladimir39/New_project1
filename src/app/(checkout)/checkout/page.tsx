@@ -18,7 +18,7 @@ import { useCreateOrdersPost } from "../../../../shared/store/orders";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-const page = () => {
+const Page = () => {
   const [submitting, setSubmitting] = useState(false);
   const { totalAmount, updateItemQuantity, items, removeCartItem, loading } =
     useCart();
@@ -30,6 +30,8 @@ const page = () => {
       email: "",
       firstName: "",
       lastName: "",
+      entrance: "",
+      floor: "",
       phone: "",
       address: "",
       comment: "",
@@ -67,10 +69,10 @@ const page = () => {
     updateItemQuantity(id, newQuantity);
   };
   return (
-    <Container className="mt-10">
+    <Container className="mt-10 max-xl:px-5">
       <Title
         text="Оформление заказа"
-        className="font-extrabold mb-8 text-[30px]"
+        className="font-extrabold mb-8 text-[30px] max-sm:text-center"
       />
 
       <FormProvider {...form}>
@@ -108,4 +110,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -7,6 +7,7 @@ import { ProductSous } from "../product-sous";
 import { Button } from "@/components/ui";
 import { ChevronDown } from "lucide-react";
 import { ProductSousAdaptive } from "./productSousAdaptive";
+import { Iingredients } from "../../../../shared/types/Ingredient.types";
 
 interface Props {
   name?: string;
@@ -43,8 +44,8 @@ export const ChooseProductFromAdaptiv: FC<Props> = ({
   };
 
   return (
-    <div className={cn("px-6 static", className)}>
-      <div className="h-5/6 overflow-auto scrollbar pb-24 ">
+    <div className={cn("px-6 static h-full", className)}>
+      <div className="h-5/6 overflow-auto scrollbar">
         <div className="m-auto mb-6 max-w-[300px]  bg-[#131313]">
           <img
             src={images}
@@ -64,7 +65,7 @@ export const ChooseProductFromAdaptiv: FC<Props> = ({
         />
 
         <div className="mt-5 overflow-auto scrollbar">
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-4 gap-3 max-sm:grid-cols-3 max-[362px]:grid-cols-2 mb-5">
             {ingredients?.map((item, index) => (
               <ProductSousAdaptive
                 key={index}

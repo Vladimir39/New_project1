@@ -20,7 +20,7 @@ export const ProductCardTest: FC<Props> = ({
   className,
 }) => {
   return (
-    <div className={className}>
+    <article className={className}>
       <Link href={`/product/${id}`}>
         <div className="relative transition ease-in-out  hover:-translate-y-1 hover:scale-102  duration-300">
           <div className="flex justify-center rounded-lg h-[230px]">
@@ -51,6 +51,6 @@ export const ProductCardTest: FC<Props> = ({
           </div>
         </div>
       </Link>
-    </div>
+    </article>
   );
 };

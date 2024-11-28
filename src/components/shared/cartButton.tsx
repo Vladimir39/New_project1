@@ -5,6 +5,7 @@ import { ArrowRight, ShoppingCart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { CartDrawer } from "./cart-drawer";
 import { useCartStore } from "../../../shared/store/cart";
+import { CartDrawerAdaptiv } from "./adaptive/cart-drawer-adaptiv";
 
 interface Props {
   className?: string;
@@ -16,14 +17,19 @@ export const CartButton: FC<Props> = ({ className }) => {
     state.loading,
     state.items,
   ]);
+
   return (
     <CartDrawer>
       <Button
         loading={loading}
-        className={cn("group relative", { "w-[105px] ": loading }, className)}
+        className={cn(
+          "group relative max-xl:mr-5",
+          { "w-[105px] ": loading },
+          className
+        )}
       >
-        <b>{totalAmount}</b>
-        <span className="h-full w-[1px] bg-white/30 mx-3" />
+        <b className="max-sm:hidden">{totalAmount}</b>
+        <span className="h-full w-[1px] bg-white/30 mx-3 max-sm:hidden" />
         <div className="flex items-center gap-1 transition duration-300 group-hover:opacity-0">
           <ShoppingCart size={16} className="relative" strokeWidth={2} />
           <b>{items.length}</b>

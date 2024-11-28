@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <>
-      {/* <Categories /> */}
+      <Categories />
       <Container className="mt-10 flex-auto">
         <div className="flex flex-col gap-16">
           {categories.map(

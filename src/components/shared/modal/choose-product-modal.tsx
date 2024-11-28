@@ -22,7 +22,11 @@ export const ChooseProductModal: FC<Props> = ({ id, className }) => {
           className
         )}
       >
-        <ProductForm id={id} onSubmit={() => router.back()} />
+        <ProductForm
+          id={id}
+          onSubmit={() => router.back()}
+          close={() => router.back()}
+        />
       </DialogContent>
     </Dialog>
   );

@@ -14,7 +14,7 @@ interface Props {
 
 export const Header: FC<Props> = ({ className, hasCart = true }) => {
   return (
-    <header className={cn("border-b", className)}>
+    <header className={cn(" border-b ", className)}>
       <Container className="flex items-center justify-between py-8">
         <Link href="/">
           <div className="flex items-center gap-4">
@@ -39,9 +39,8 @@ export const Header: FC<Props> = ({ className, hasCart = true }) => {
           </div>
         </Link>
 
-        <CallButtonTel className="hidden md:block" />
         <div className="flex gap-2">
-          {hasCart && <CartButton />}
+          <CallButtonTel className="hidden md:block" />
           <div className="md:hidden bg-secondary text-primary rounded-md px-2 pt-2 items-center hover:bg-secondary/50 ">
             <BurgerModal />
           </div>

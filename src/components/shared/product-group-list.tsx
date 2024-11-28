@@ -4,10 +4,10 @@ import React, { FC, useEffect, useRef, useState } from "react";
 import { useIntersection } from "react-use";
 import { Title } from "./title";
 import { cn } from "../../lib/utils";
-import { ProductCard } from "./product-card";
 import { useCategoryStore } from "../../../shared/store/category";
 import { ProductCardTest } from "./Product-cart-test";
 import { ProductCardAdaptive } from "./adaptive";
+import { useResize } from "../../../shared/hooks/useResize";
 
 interface Props {
   title: string;
@@ -25,10 +25,20 @@ export const ProductGroupList: FC<Props> = ({
   className,
 }) => {
   const setActiveCategoryId = useCategoryStore((state) => state.setActiveId);
+  const [stateThreshold, setStateThreshold] = useState(0.4);
   const intersectionRef = useRef(null);
   const intersection = useIntersection(intersectionRef, {
-    threshold: 0.4,
+    threshold: stateThreshold,
   });
+  const resize = useResize("(min-width:640px)", true);
+
+  useEffect(() => {
+    if (window.innerHeight < 730) {
+      setStateThreshold(0.1);
+    } else {
+      setStateThreshold(0.4);
+    }
+  }, []);
 
   useEffect(() => {
     if (intersection?.isIntersecting) {
@@ -37,12 +47,8 @@ export const ProductGroupList: FC<Props> = ({
   }, [categoryId, intersection?.isIntersecting, title]);
 
   return (
-    <div className={className} id={title} ref={intersectionRef}>
-      <Title
-        text={title}
-        size="lg"
-        className="font-extrabold mb-5 max-sm:hidden"
-      />
+    <section className={className} id={title} ref={intersectionRef}>
+      <Title text={title} size="lg" className="font-extrabold mb-5 " />
 
       <div
         className={cn(
@@ -50,27 +56,26 @@ export const ProductGroupList: FC<Props> = ({
           listClassName
         )}
       >
-        {items.map((product, i) => (
-          <ProductCardTest
-            key={product.id}
-            id={product.id}
-            name={product.name}
-            imageUrl={product.images}
-            price={product.price}
-            className="max-sm:hidden"
-          />
-        ))}
-        {items.map((product, i) => (
-          <ProductCardAdaptive
-            key={product.id}
-            id={product.id}
-            name={product.name}
-            imageUrl={product.images}
-            price={product.price}
-            className="px-4 hidden max-sm:block"
-          />
-        ))}
+        {resize
+          ? items.map((product, i) => (
+              <ProductCardTest
+                key={product.id}
+                id={product.id}
+                name={product.name}
+                imageUrl={product.images}
+                price={product.price}
+              />
+            ))
+          : items.map((product, i) => (
+              <ProductCardAdaptive
+                key={product.id}
+                id={product.id}
+                name={product.name}
+                imageUrl={product.images}
+                price={product.price}
+              />
+            ))}
       </div>
-    </div>
+    </section>
   );
 };

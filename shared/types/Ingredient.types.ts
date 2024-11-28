@@ -4,3 +4,7 @@ export interface Iingredients {
   imageUrl: string;
   price: number;
 }
+
+export interface IngredientsProps {
+  items: Iingredients[];
+}
