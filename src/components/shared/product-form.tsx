@@ -24,8 +24,6 @@ export const ProductForm: FC<Props> = ({
     state.loading,
   ]);
 
-  console.log(loading);
-
   const onSubmit = async (productID: number, ingredients: number[]) => {
     try {
       addCartItem({

@@ -16,14 +16,35 @@ export const Categories: FC<Props> = ({ className, hasCart = true }) => {
   const activeCategoryId = useCategoryStore((state) => state.activeId);
   const { categories } = useCategoryNav();
 
-  // ПОПРАВИТЬ, ЧТОБЫ БЫЛО ЛУЧШЕ НАПИСАНО
-  const x = [""];
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const targetId = e.currentTarget.getAttribute("href")?.slice(2);
 
-  categories.map((item) => x.push(item.name));
+    if (!targetId) return;
+
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      const targetPosition =
+        targetElement.getBoundingClientRect().top + window.scrollY;
+      console.log(targetPosition);
+
+      const offset = window.innerHeight / 3.7;
+      window.scrollTo({
+        top: targetPosition - offset,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  // ПОПРАВИТЬ, ЧТОБЫ БЫЛО ЛУЧШЕ НАПИСАНО
+  const scrollYAdaptive: string[] = [""];
+
+  categories.map((item) => scrollYAdaptive.push(item.name));
 
   useEffect(() => {
     const activeLink = document.querySelector(
-      `a[href="/#${x[activeCategoryId]}"]`
+      `a[href="/#${scrollYAdaptive[activeCategoryId]}"]`
     );
     activeLink?.scrollIntoView({
       behavior: "smooth",
@@ -55,6 +76,7 @@ export const Categories: FC<Props> = ({ className, hasCart = true }) => {
               )}
               href={`/#${name}`}
               key={index}
+              onClick={handleAnchorClick}
             >
               <button className={cn("text-sm whitespace-nowrap", className)}>
                 {name}

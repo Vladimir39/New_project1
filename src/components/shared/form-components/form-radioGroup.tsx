@@ -32,17 +32,17 @@ export const FormRadioGroup: FC<Props> = ({ name }) => {
     <div className="flex flex-col gap-5 mt-10">
       <RadioGroup defaultValue="comfortable">
         {name.map((name: string, index) => (
-          <div key={index} className="flex items-center space-x-2">
+          <div key={index} className="flex items-center space-x-2 ">
             <RadioGroupItem
               value={name}
               id={name}
               className={`${activePoint === name ? "border-red-500" : " "}`}
               onClick={() => activeHandler(name)}
-              {...register("address")}
+              {...register("address", { required: true })}
             />
             <Label
               htmlFor={name}
-              className="flex text-base w-4/5 max-[500px]:text-sm text-balance "
+              className="flex text-base w-4/5 max-[500px]:text-sm text-balance cursor-pointer"
             >
               <MapPin className="mr-4 max-[500px]:mr-1 max-[360px]:hidden" />
               {name}

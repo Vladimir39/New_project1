@@ -19,5 +19,6 @@ export { RequiredSymbol } from "./required-symbol";
 export { ErrorText } from "./error-text";
 export { ClearButton } from "./clear-button";
 export { CheckoutPickupAddress } from "./checkout-pickup-address";
+
 export * from "./form-components";
 export * from "./modal";

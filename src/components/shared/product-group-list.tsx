@@ -25,20 +25,13 @@ export const ProductGroupList: FC<Props> = ({
   className,
 }) => {
   const setActiveCategoryId = useCategoryStore((state) => state.setActiveId);
-  const [stateThreshold, setStateThreshold] = useState(0.4);
   const intersectionRef = useRef(null);
   const intersection = useIntersection(intersectionRef, {
-    threshold: stateThreshold,
+    root: null,
+    rootMargin: "-30% 0px -70% 0px",
+    threshold: 0,
   });
   const resize = useResize("(min-width:640px)", true);
-
-  useEffect(() => {
-    if (window.innerHeight < 730) {
-      setStateThreshold(0.1);
-    } else {
-      setStateThreshold(0.4);
-    }
-  }, []);
 
   useEffect(() => {
     if (intersection?.isIntersecting) {
@@ -48,7 +41,9 @@ export const ProductGroupList: FC<Props> = ({
 
   return (
     <section className={className} id={title} ref={intersectionRef}>
-      <Title text={title} size="lg" className="font-extrabold mb-5 " />
+      <div ref={intersectionRef}>
+        <Title text={title} size="lg" className="font-extrabold mb-5 " />
+      </div>
 
       <div
         className={cn(
