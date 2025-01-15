@@ -1,36 +1,60 @@
 "use client";
 
-import { FC, useState } from "react";
-import { FormProvider, useForm } from "react-hook-form";
+import { FC, useEffect, useState } from "react";
+import { FormProvider } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { MetodDelivery } from "./metod-delivery";
 import { ChoiceDeliver } from "./choice-deliver";
 import { FormRadioGroup } from "../form-components";
-
-interface DeliveryProps {
-  delivery: string;
-  address: string;
-}
+import { deliveryFormValues } from "../checkout/checkout-form-schema";
+import { useDeliveryForm } from "../../../../shared/hooks/useCheckoutForm";
+import { useCreateDeliveryOrder } from "../../../../shared/store/dataDelivery";
+import { Pencil } from "lucide-react";
 
 export const ChoiceDeliveryModal: FC = () => {
-  const form = useForm<DeliveryProps>();
-
+  const form = useDeliveryForm();
+  const [open, setOpen] = useState<boolean>(true);
+  const [Delivery, setDelivery] = useState<deliveryFormValues>();
+  const { setDeliveryData } = useCreateDeliveryOrder();
   const [activeDelivery, setActiveDelivery] = useState<"delivery" | "pickup">(
-    "pickup"
+    "delivery"
   );
 
-  const onSubmit = (data: DeliveryProps) => {
-    console.log(data);
+  useEffect(() => {
+    const x = localStorage.getItem("delivery");
+    if (x) {
+      const y = JSON.parse(x!);
+      setDelivery(y);
+      setDeliveryData(y);
+      setOpen(false);
+      console.log(y);
+    }
+  }, []);
+
+  const onSubmit = async (deliveryData: deliveryFormValues) => {
+    await setDeliveryData(deliveryData);
+    await setDelivery(deliveryData);
+    localStorage.setItem("delivery", JSON.stringify(deliveryData));
+    setOpen(false);
   };
 
   return (
-    <Dialog>
-      <DialogTrigger asChild>
-        <Button variant="outline">Edit Profile</Button>
+    <Dialog open={open}>
+      <DialogTrigger asChild onClick={() => setOpen(true)}>
+        {Delivery ? (
+          <div className="flex  gap-1 hover:text-primary cursor-pointer mb-5">
+            <Pencil className="w-3 h-5" />
+            <p className="font-bold text-sm">
+              {Delivery.delivery} : {Delivery.address}
+            </p>
+          </div>
+        ) : (
+          "Тип доставки"
+        )}
       </DialogTrigger>
 
-      <DialogContent className="max-w-[1000px] h-96 mx-0 ">
+      <DialogContent className="max-w-[1000px] min-h-[400px] mx-0 ">
         <FormProvider {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
@@ -42,15 +66,15 @@ export const ChoiceDeliveryModal: FC = () => {
               }
               activeDelivery={activeDelivery}
             />
-            {form.formState.errors.delivery && (
-              <p className="text-red-500 text-center">
-                Выберите способ доставки
+            {activeDelivery === "pickup" ? (
+              <p className="text-center text-2xl font-bold">
+                При выборе опции `Самовывоз`, некоторые блюда могут быть
+                недоступны
               </p>
+            ) : (
+              <p>Введите адрес доставки</p>
             )}
-            <p className="text-center text-2xl font-bold">
-              При выборе опции "Самовывоз", некоторые блюда могут быть
-              недоступны
-            </p>
+
             {activeDelivery === "pickup" ? (
               <FormRadioGroup
                 name={[
@@ -61,11 +85,7 @@ export const ChoiceDeliveryModal: FC = () => {
             ) : (
               <ChoiceDeliver />
             )}
-            {form.formState.errors.address && (
-              <p className="text-red-500 text-center">
-                Выберите адрес доставки
-              </p>
-            )}
+
             <Button type="submit" className="text-xl w-full">
               Продолжить
             </Button>

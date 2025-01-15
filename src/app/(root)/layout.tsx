@@ -1,4 +1,3 @@
-import { ChoiceDeliveryModal } from "@/components/shared/choice-delivery-modal/choice-delivery-modal";
 import { Footer, Header } from "../../components/shared";
 import { Metadata } from "next";
 
@@ -16,7 +15,6 @@ export default function HomeLayout({
   return (
     <main className="min-h-screen flex flex-col ">
       <Header className="max-xl:px-5" />
-      <ChoiceDeliveryModal />
       {children}
       {modal}
       <Footer className="text-white" />

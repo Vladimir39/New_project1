@@ -9,10 +9,9 @@ import { BurgerModal } from "./adaptive";
 
 interface Props {
   className?: string;
-  hasCart?: boolean;
 }
 
-export const Header: FC<Props> = ({ className, hasCart = true }) => {
+export const Header: FC<Props> = ({ className }) => {
   return (
     <header className={cn(" border-b ", className)}>
       <Container className="flex items-center justify-between py-8">

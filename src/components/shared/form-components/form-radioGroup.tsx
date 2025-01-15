@@ -2,7 +2,7 @@
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { MapPin } from "lucide-react";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { ErrorText } from "../error-text";
 
@@ -20,10 +20,12 @@ export const FormRadioGroup: FC<Props> = ({ name }) => {
   const [activePoint, setActivePoint] = useState<string | null>(null);
 
   const errorText = errors["address"]?.message as string;
-  console.log(errorText);
+
+  useEffect(() => {
+    setValue("address", null);
+  }, []);
 
   const activeHandler = (type: string) => {
-    console.log(type);
     setValue("address", type, { shouldValidate: true });
     setActivePoint(type);
   };

@@ -27,8 +27,9 @@ export const CheckoutSidebar: FC<Props> = ({
           </span>
         )}
       </div>
-      <div className="flex my-4">
-        <span>Стоимость товара</span>
+      <div className="my-4">
+        <p className="font-bold text-[14px]">Доставка от 1500 руб. БЕСПЛАТНО</p>
+        <p className="text-[13px] mt-5">* в пределах 3км</p>
       </div>
       <Button
         loading={loading}

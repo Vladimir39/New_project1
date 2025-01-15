@@ -3,9 +3,7 @@ import { useSet } from "react-use";
 import { calcProductPrices } from "@/lib/calc-Product-Prices";
 import { Title } from "../title";
 import { cn } from "@/lib/utils";
-import { ProductSous } from "../product-sous";
 import { Button } from "@/components/ui";
-import { ChevronDown } from "lucide-react";
 import { ProductSousAdaptive } from "./productSousAdaptive";
 import { Iingredients } from "../../../../shared/types/Ingredient.types";
 

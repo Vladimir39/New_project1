@@ -4,6 +4,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow: visible;
+  -webkit-overflow-scrolling: touch;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {

@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 
 interface Props {
@@ -8,6 +8,11 @@ interface Props {
 
 export const MetodDelivery: FC<Props> = ({ onClick, activeDelivery }) => {
   const { register, setValue } = useFormContext();
+
+  useEffect(() => {
+    onClick("delivery");
+    setValue("delivery", "Доставка");
+  }, []);
 
   const handleValue = (metod: "delivery" | "pickup") => {
     onClick(metod);

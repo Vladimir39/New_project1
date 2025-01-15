@@ -16,42 +16,45 @@ export const Categories: FC<Props> = ({ className, hasCart = true }) => {
   const activeCategoryId = useCategoryStore((state) => state.activeId);
   const { categories } = useCategoryNav();
 
+  const scrollYAdaptive = categories.map((item) => item.name);
+
   const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const targetId = e.currentTarget.getAttribute("href")?.slice(2);
 
-    if (!targetId) return;
+    if (targetId) {
+      const targetElement = document.getElementById(targetId);
 
-    const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        const targetPosition =
+          targetElement.offsetTop - window.innerHeight / 3.7;
 
-    if (targetElement) {
-      const targetPosition =
-        targetElement.getBoundingClientRect().top + window.scrollY;
-      console.log(targetPosition);
-
-      const offset = window.innerHeight / 3.7;
-      window.scrollTo({
-        top: targetPosition - offset,
-        behavior: "smooth",
-      });
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+      }
     }
   };
 
-  // ПОПРАВИТЬ, ЧТОБЫ БЫЛО ЛУЧШЕ НАПИСАНО
-  const scrollYAdaptive: string[] = [""];
-
-  categories.map((item) => scrollYAdaptive.push(item.name));
-
   useEffect(() => {
-    const activeLink = document.querySelector(
-      `a[href="/#${scrollYAdaptive[activeCategoryId]}"]`
-    );
-    activeLink?.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "center",
-    });
-  }, [activeCategoryId]);
+    if (scrollYAdaptive[activeCategoryId]) {
+      const activeLink = document.querySelector(
+        `a[href="/#${scrollYAdaptive[activeCategoryId]}"]`
+      );
+
+      if (activeLink) {
+        activeLink.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
+        });
+      }
+    }
+  }, [activeCategoryId, scrollYAdaptive]);
+
+  const activeLinkClass = "bg-white shadow-md shadow-gray-200 text-primary";
+  const linkClass = "flex items-center font-bold h-10 rounded-2xl px-3";
 
   return (
     <div
@@ -67,22 +70,25 @@ export const Categories: FC<Props> = ({ className, hasCart = true }) => {
             className
           )}
         >
-          {categories.map(({ id, name }, index) => (
-            <a
-              className={cn(
-                "flex items-center font-bold h-10 rounded-2xl px-3",
-                activeCategoryId === id &&
-                  "bg-white shadow-md shadow-gray-200 text-primary"
-              )}
-              href={`/#${name}`}
-              key={index}
-              onClick={handleAnchorClick}
-            >
-              <button className={cn("text-sm whitespace-nowrap", className)}>
-                {name}
-              </button>
-            </a>
-          ))}
+          {categories.length > 0 ? (
+            categories.map(({ id, name }, index) => (
+              <a
+                className={cn(
+                  linkClass,
+                  activeCategoryId === id && activeLinkClass
+                )}
+                href={`/#${name}`}
+                key={index}
+                onClick={handleAnchorClick}
+              >
+                <button className={cn("text-sm whitespace-nowrap", className)}>
+                  {name}
+                </button>
+              </a>
+            ))
+          ) : (
+            <p className="text-gray-500">Нет категорий</p>
+          )}
         </div>
         {hasCart && <CartButton className="h-12" />}
       </Container>

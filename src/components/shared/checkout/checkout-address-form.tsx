@@ -31,12 +31,6 @@ export const CheckoutAddressForm: FC<Props> = ({ className }) => {
         />
         <FormInput name="floor" className="text-base" placeholder="Этаж" />
       </div>
-
-      <FormTextarea
-        name="comment"
-        className="text-base"
-        placeholder="Комментарий к заказу"
-      />
     </div>
   );
 };

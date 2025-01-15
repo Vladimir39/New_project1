@@ -1,48 +1,36 @@
 "use client";
 
-import { useForm, FormProvider } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { FormProvider } from "react-hook-form";
 import { CheckoutSidebar, Container, Title } from "@/components/shared";
 import { useCart } from "../../../../shared/hooks/useCart";
 
 import {
+  ChechoutTimeDelivery,
   CheckoutButtonAddress,
   CheckoutCart,
+  CheckoutDeliveryInForm,
   CheckoutPersonalForm,
 } from "@/components/shared/checkout";
-import {
-  checkoutFormSchema,
-  CheckoutFormValues,
-} from "@/components/shared/checkout/checkout-form-schema";
+import { CheckoutFormValues } from "@/components/shared/checkout/checkout-form-schema";
 import { useCreateOrdersPost } from "../../../../shared/store/orders";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { useCheckoutForm } from "../../../../shared/hooks/useCheckoutForm";
+import { useCreateDeliveryOrder } from "../../../../shared/store/dataDelivery";
 
 const Page = () => {
   const [submitting, setSubmitting] = useState(false);
+  const [edit, setEdit] = useState<boolean>(true);
   const { totalAmount, updateItemQuantity, items, removeCartItem, loading } =
     useCart();
   const { fetchOrdersPost } = useCreateOrdersPost();
-
-  const form = useForm<CheckoutFormValues>({
-    resolver: zodResolver(checkoutFormSchema),
-    defaultValues: {
-      email: "",
-      firstName: "",
-      lastName: "",
-      entrance: "",
-      floor: "",
-      phone: "",
-      address: "",
-      comment: "",
-    },
-  });
+  const { deliveryData } = useCreateDeliveryOrder();
+  const form = useCheckoutForm();
 
   const onSubmit = async (data: CheckoutFormValues) => {
     try {
       setSubmitting(true);
       const order = await fetchOrdersPost(data);
-      console.log(order);
       toast.error(`Заказ успешно оформлен! \n 📝 Ваш заказ ${order?.count}`, {
         icon: "✅",
       });
@@ -53,7 +41,6 @@ const Page = () => {
         }
       }, 3000);
     } catch (err) {
-      console.log(err);
       setSubmitting(false);
       toast.error("Не удалось создать заказ", {
         icon: "❌",
@@ -91,9 +78,18 @@ const Page = () => {
                 className={loading ? "opacity-40 pointer-events-none" : ""}
               />
 
-              <CheckoutButtonAddress
-                className={loading ? "opacity-40 pointer-events-none" : ""}
-              />
+              {edit ? (
+                <CheckoutDeliveryInForm
+                  setEdit={setEdit}
+                  deliveryData={deliveryData}
+                />
+              ) : (
+                <CheckoutButtonAddress
+                  className={loading ? "opacity-40 pointer-events-none" : ""}
+                />
+              )}
+
+              <ChechoutTimeDelivery />
             </div>
             {/* Правая часть */}
 

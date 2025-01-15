@@ -63,26 +63,29 @@ export const CheckoutItem: FC<Props> = ({
       ) : (
         <div
           className={cn(
-            "flex items-center justify-between max-sm:block",
+            "flex items-center justify-between max-sm:block max-sm:mb-6",
             className
           )}
         >
-          <div className="flex items-center gap-5 flex-1 max-sm:justify-between">
+          <div className="flex items-center gap-5 flex-1 max-sm:justify-between max-sm:relative">
             <CartItemDetailsImage
               src={imageUrl}
               className="max-sm:w-[130px] max-sm:h-[100px]"
             />
             <CartItemInfo name={name} details={details} />
           </div>
-          <CartItemDetailsPrice value={price} />
-          <div className="flex items-center gap-5 ml-20 ">
+          <CartItemDetailsPrice
+            value={price}
+            className="max-sm:absolute max-sm:text-xl max-sm:mt-5"
+          />
+          <div className="flex gap-5 ml-20 max-sm:justify-center max-sm:ml-0 max-sm:mt-5">
             <CartItemDetailsCountButton
               onClick={onClickCountButton}
               value={quantity}
             />
             <button onClick={onClickRemove}>
               <X
-                className="text-gray-200 cursor-pointer hover:text-gray-400"
+                className="text-gray-200 cursor-pointer hover:text-gray-400 max-sm:absolute max-sm:right-12 max-sm:mt-[-140px]"
                 size={20}
               />
             </button>

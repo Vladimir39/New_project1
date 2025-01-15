@@ -10,11 +10,6 @@ export const CheckoutPickupForm: FC = () => {
           "г. Химки, пр-т Мельникова, 2Б, стр.1",
         ]}
       />
-      <FormTextarea
-        name="comment"
-        className="text-base"
-        placeholder="Комментарий к заказу"
-      />
     </>
   );
 };

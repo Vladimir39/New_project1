@@ -84,7 +84,7 @@ const config = {
     plugin(function ({ addUtilities }) {
       addUtilities({
         ".hidden-scrollbar": {
-          overflow: "auto",
+          overflowX: "auto",
           "-webkit-overflow-scrolling": "touch",
           "scrollbar-width": "none",
         },
