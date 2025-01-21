@@ -6,3 +6,4 @@ export { CheckoutPickupForm } from "./checkout-pickup-form";
 export { CheckoutButtonAddress } from "./checkout-button-address";
 export { CheckoutDeliveryInForm } from "./checkout-delivery-in-form";
 export { ChechoutTimeDelivery } from "./chechout-time-delivery";
+export { TimeOther } from "./checkout-time-other";

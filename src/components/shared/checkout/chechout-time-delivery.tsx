@@ -5,6 +5,7 @@ import { useFormContext } from "react-hook-form";
 import { ErrorText } from "../error-text";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
+import { TimeOther } from "./index";
 
 interface Props {
   className?: string;
@@ -12,15 +13,16 @@ interface Props {
 
 export const ChechoutTimeDelivery: FC<Props> = ({ className }) => {
   const {
-    register,
     setValue,
     formState: { errors },
   } = useFormContext();
   const [activePoint, setActivePoint] = useState<string | null>(null);
+  const [time, setTime] = useState<string | null>(null);
+
   useEffect(() => {
     setValue("time", null);
   }, []);
-  const options = useTimeDelivery(15, 10);
+  const options = useTimeDelivery(15, 5);
   const errorText = errors["time"]?.message as string;
   const activeHandler = (type: string) => {
     console.log(type);
@@ -43,9 +45,8 @@ export const ChechoutTimeDelivery: FC<Props> = ({ className }) => {
               <RadioGroupItem
                 value={item}
                 className={`${
-                  activePoint === item ? "border-red-500" : " "
+                  activePoint === item ? "bg-red-500 " : " "
                 } max-w-[130px] h-[40px]  cursor-pointer border m-1 text-center rounded-md `}
-                {...register("time", { required: true })}
               />
               <Label
                 htmlFor={item}
@@ -55,8 +56,12 @@ export const ChechoutTimeDelivery: FC<Props> = ({ className }) => {
               </Label>
             </div>
           ))}
+          <TimeOther
+            setActivePoint={setActivePoint}
+            activePoint={activePoint}
+            setValue={setValue}
+          />
         </RadioGroup>
-        {/* <TimePicker/> */}
       </div>
       {errorText && (
         <ErrorText text={"Укажите время доставки"} className="mb-2" />

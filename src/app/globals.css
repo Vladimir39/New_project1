@@ -47,3 +47,7 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+.rc-time-picker-input {
+  @apply bg-transparent border-none p-0 text-inherit shadow-none;
+}
