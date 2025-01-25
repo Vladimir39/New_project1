@@ -11,8 +11,15 @@ import { deliveryFormValues } from "../checkout/checkout-form-schema";
 import { useDeliveryForm } from "../../../../shared/hooks/useCheckoutForm";
 import { useCreateDeliveryOrder } from "../../../../shared/store/dataDelivery";
 import { Pencil } from "lucide-react";
+import { useCategoryNav } from "../../../../shared/hooks/useCategory";
 
-export const ChoiceDeliveryModal: FC = () => {
+interface ReturnProps {
+  setDeliveryAddress: React.Dispatch<React.SetStateAction<number | undefined>>;
+}
+
+export const ChoiceDeliveryModal: FC<ReturnProps> = ({
+  setDeliveryAddress,
+}) => {
   const form = useDeliveryForm();
   const [open, setOpen] = useState<boolean>(true);
   const [Delivery, setDelivery] = useState<deliveryFormValues>();
@@ -28,11 +35,18 @@ export const ChoiceDeliveryModal: FC = () => {
       setDelivery(y);
       setDeliveryData(y);
       setOpen(false);
-      console.log(y);
     }
   }, []);
 
   const onSubmit = async (deliveryData: deliveryFormValues) => {
+    if (
+      deliveryData?.delivery === "Самовывоз" &&
+      deliveryData?.address === "г. Химки, пр-т Юбилейный, 51, к.1"
+    ) {
+      setDeliveryAddress(0);
+    } else {
+      setDeliveryAddress(1);
+    }
     await setDeliveryData(deliveryData);
     await setDelivery(deliveryData);
     localStorage.setItem("delivery", JSON.stringify(deliveryData));

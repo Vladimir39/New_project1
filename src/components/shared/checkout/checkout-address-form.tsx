@@ -1,5 +1,5 @@
-import { FC } from "react";
-import { FormInput, FormTextarea } from "../form-components";
+import { FC, useEffect } from "react";
+import { FormInput } from "../form-components";
 import { AddressInput } from "../address-input";
 import { Controller, useFormContext } from "react-hook-form";
 import { ErrorText } from "../error-text";
@@ -9,7 +9,14 @@ interface Props {
 }
 
 export const CheckoutAddressForm: FC<Props> = ({ className }) => {
-  const { control } = useFormContext();
+  const { control, setValue } = useFormContext();
+
+  useEffect(() => {
+    setValue("entrance", "");
+    setValue("floor", "");
+    setValue("home", "");
+    setValue("flat", "");
+  }, []);
 
   return (
     <div className="flex flex-col gap-5 mt-10">
@@ -24,11 +31,14 @@ export const CheckoutAddressForm: FC<Props> = ({ className }) => {
         )}
       />
       <div className="grid grid-cols-2 gap-5 ">
+        <FormInput name="flat" className="text-base" placeholder="Квартира" />
+
         <FormInput
           name="entrance"
           className="text-base"
           placeholder="Подъезд"
         />
+        <FormInput name="code" className="text-base" placeholder="Код двери" />
         <FormInput name="floor" className="text-base" placeholder="Этаж" />
       </div>
     </div>

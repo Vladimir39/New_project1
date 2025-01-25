@@ -15,9 +15,15 @@ export const CartItemInfo: React.FC<Props> = ({ name, details, className }) => {
         </h2>
       </div>
       {details && (
-        <p className="text-xs text-gray-400 w-[90%]">
-          Дополнительно: {details}
-        </p>
+        <div>
+          <p className="text-xs text-gray-400 w-[90%]">
+            Дополнительно: {`${details}`}
+          </p>
+          <hr />
+          <p className="text-[10px] text-gray-400 w-[90%] mt-1">
+            Соусы и мучное добавляются по одному
+          </p>
+        </div>
       )}
     </div>
   );

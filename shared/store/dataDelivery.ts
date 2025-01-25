@@ -6,6 +6,8 @@ interface Delivery {
     delivery: string;
     entrance?: string;
     floor?: string;
+    code?: string;
+    flat?: string;
     comment?: string;
   };
   setDeliveryData: (data: Partial<Delivery["deliveryData"]>) => void;
@@ -17,6 +19,8 @@ export const useCreateDeliveryOrder = create<Delivery>((set) => ({
     delivery: "",
     entrance: "",
     floor: "",
+    code: "",
+    flat: "",
     comment: "",
   },
   setDeliveryData: (data) =>

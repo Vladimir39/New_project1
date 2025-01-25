@@ -55,7 +55,6 @@ export const addCartItem = async (
   if (token) {
     headers.Authorization = token;
   }
-
   return (
     await axiosInstance.post<Cart>("/cart/", values, {
       headers,

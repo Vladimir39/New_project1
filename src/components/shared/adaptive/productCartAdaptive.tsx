@@ -7,6 +7,7 @@ import { Button } from "@/components/ui";
 interface Props {
   id: number;
   name: string;
+  categoryName: string;
   price: number;
   imageUrl: string;
   className?: string;

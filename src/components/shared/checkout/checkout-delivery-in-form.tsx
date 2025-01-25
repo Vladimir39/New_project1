@@ -38,6 +38,16 @@ export const CheckoutDeliveryInForm: FC<Props> = ({
           </p>
           {deliveryData?.entrance === "" ? null : (
             <p>
+              <span>Дом: </span> {deliveryData?.entrance}
+            </p>
+          )}
+          {deliveryData?.entrance === "" ? null : (
+            <p>
+              <span>Квартира: </span> {deliveryData?.entrance}
+            </p>
+          )}
+          {deliveryData?.entrance === "" ? null : (
+            <p>
               <span>Подъезд: </span> {deliveryData?.entrance}
             </p>
           )}

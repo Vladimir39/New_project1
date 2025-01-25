@@ -10,6 +10,8 @@ export const ChoiceDeliver: FC = () => {
   useEffect(() => {
     setValue("entrance", "");
     setValue("floor", "");
+    setValue("home", "");
+    setValue("flat", "");
   }, []);
 
   return (
@@ -25,11 +27,13 @@ export const ChoiceDeliver: FC = () => {
         )}
       />
       <div className="grid grid-cols-2 gap-5 ">
+        <FormInput name="flat" className="text-base" placeholder="Квартира" />
         <FormInput
           name="entrance"
           className="text-base"
           placeholder="Подъезд"
         />
+        <FormInput name="code" className="text-base" placeholder="Код двери" />
         <FormInput name="floor" className="text-base" placeholder="Этаж" />
       </div>
     </div>
