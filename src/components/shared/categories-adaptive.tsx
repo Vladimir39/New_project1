@@ -25,7 +25,6 @@ export const CategoriesAdaptive: FC<Props> = ({
   const swiperRef = useRef<any>(null);
 
   useEffect(() => {
-    console.log(swiperRef.current.slideTo(activeCategoryId));
     if (swiperRef.current && categories[activeCategoryId]) {
       swiperRef.current.slideTo(activeCategoryId - 1);
     }

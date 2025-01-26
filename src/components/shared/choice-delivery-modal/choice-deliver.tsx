@@ -21,6 +21,9 @@ export const ChoiceDeliver: FC = () => {
         name="address"
         render={({ field, fieldState: { error } }) => (
           <>
+            <p className="mb-[-18px] text-sm text-gray-500">
+              Укажите улицу, дом
+            </p>
             <AddressInput onChange={field.onChange} />
             {error?.message && <ErrorText text={error.message} />}
           </>

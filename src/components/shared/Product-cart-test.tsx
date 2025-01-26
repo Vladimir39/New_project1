@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { Title } from "./title";
 import { Button } from "../ui";
 import { Plus } from "lucide-react";
@@ -10,6 +12,7 @@ interface Props {
   categoryName: string;
   price: number;
   imageUrl: string;
+  availability: boolean;
   className?: string;
 }
 
@@ -18,10 +21,27 @@ export const ProductCardTest: FC<Props> = ({
   name,
   price,
   imageUrl,
+  availability,
   className,
 }) => {
+  const time = new Date();
+  const hours = time.getHours();
+  const [active, setActive] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (hours >= 11 && hours <= 23) {
+      setActive(false);
+    } else {
+      setActive(true);
+    }
+  }, [time]);
+
   return (
-    <article className={className}>
+    <article
+      className={`${
+        availability === active ? `opacity-30 pointer-events-none` : ""
+      }`}
+    >
       <Link href={`/product/${id}`}>
         <div className="relative transition ease-in-out  hover:-translate-y-1 hover:scale-102  duration-300">
           <div className="flex justify-center rounded-lg h-[230px]">
@@ -46,8 +66,12 @@ export const ProductCardTest: FC<Props> = ({
               </span>
             </div>
             <Button variant="secondary" className="text-base font-bold">
-              <Plus size={20} className="mr-1" />
-              Добавить
+              {availability === active ? (
+                ""
+              ) : (
+                <Plus size={20} className="mr-1" />
+              )}
+              {availability === active ? "C 11:00" : "Добавить"}
             </Button>
           </div>
         </div>

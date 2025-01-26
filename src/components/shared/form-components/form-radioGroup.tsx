@@ -12,6 +12,9 @@ interface Props {
 }
 
 export const FormRadioGroup: FC<Props> = ({ name }) => {
+  const time = new Date();
+  const hours = time.getHours();
+  const [activeTime, setActiveTime] = useState<boolean>(false);
   const {
     register,
     formState: { errors },
@@ -20,6 +23,14 @@ export const FormRadioGroup: FC<Props> = ({ name }) => {
   const [activePoint, setActivePoint] = useState<string | null>(null);
 
   const errorText = errors["address"]?.message as string;
+
+  useEffect(() => {
+    if (hours >= 10 && hours <= 23) {
+      setActiveTime(false);
+    } else {
+      setActiveTime(true);
+    }
+  }, [time]);
 
   useEffect(() => {
     setValue("address", null);
@@ -36,15 +47,30 @@ export const FormRadioGroup: FC<Props> = ({ name }) => {
         {name.map((name: string, index) => (
           <div key={index} className="flex items-center space-x-2 ">
             <RadioGroupItem
+              disabled={
+                name === "г. Химки, пр-т Юбилейный, 33, стр.1"
+                  ? activeTime
+                  : false
+              }
               value={name}
               id={name}
-              className={`${activePoint === name ? "border-red-500" : " "}`}
+              className={`${activePoint === name ? "border-red-500" : " "}  ${
+                activeTime === true &&
+                name === "г. Химки, пр-т Юбилейный, 33, стр.1"
+                  ? "overflow-hidden bg-zinc-100"
+                  : "hover:border-red-500"
+              }`}
               onClick={() => activeHandler(name)}
               {...register("address", { required: true })}
             />
             <Label
               htmlFor={name}
-              className="flex text-base w-4/5 max-[500px]:text-sm text-balance cursor-pointer"
+              className={`flex text-base w-4/5 max-[500px]:text-sm text-balance cursor-pointer ${
+                activeTime === true &&
+                name === "г. Химки, пр-т Юбилейный, 33, стр.1"
+                  ? "text-zinc-200"
+                  : ""
+              }`}
             >
               <MapPin className="mr-4 max-[500px]:mr-1 max-[360px]:hidden" />
               {name}

@@ -28,15 +28,15 @@ export const ChoiceDeliveryModal: FC<ReturnProps> = ({
     "delivery"
   );
 
-  useEffect(() => {
-    const x = localStorage.getItem("delivery");
-    if (x) {
-      const y = JSON.parse(x!);
-      setDelivery(y);
-      setDeliveryData(y);
-      setOpen(false);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const x = localStorage.getItem("delivery");
+  //   if (x) {
+  //     const y = JSON.parse(x!);
+  //     setDelivery(y);
+  //     setDeliveryData(y);
+  //     setOpen(false);
+  //   }
+  // }, []);
 
   const onSubmit = async (deliveryData: deliveryFormValues) => {
     if (
@@ -81,18 +81,20 @@ export const ChoiceDeliveryModal: FC<ReturnProps> = ({
               activeDelivery={activeDelivery}
             />
             {activeDelivery === "pickup" ? (
-              <p className="text-center text-2xl font-bold">
+              <p className="text-center text-lg font-bold  mt-5">
                 При выборе опции `Самовывоз`, некоторые блюда могут быть
                 недоступны
               </p>
             ) : (
-              <p>Введите адрес доставки</p>
+              <p className="text-center text-lg font-bold mt-5">
+                Введите адрес доставки
+              </p>
             )}
 
             {activeDelivery === "pickup" ? (
               <FormRadioGroup
                 name={[
-                  "г. Химки, пр-т Юбилейный, 51, к.1",
+                  "г. Химки, пр-т Юбилейный, 33, стр.1",
                   "г. Химки, пр-т Мельникова, 2Б, стр.1",
                 ]}
               />
@@ -100,7 +102,7 @@ export const ChoiceDeliveryModal: FC<ReturnProps> = ({
               <ChoiceDeliver />
             )}
 
-            <Button type="submit" className="text-xl w-full">
+            <Button type="submit" className="text-xl w-full mt-5">
               Продолжить
             </Button>
           </form>

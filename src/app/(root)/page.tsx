@@ -9,7 +9,6 @@ import { useCategoryNav } from "../../../shared/hooks/useCategory";
 import { ChoiceDeliveryModal } from "@/components/shared/choice-delivery-modal/choice-delivery-modal";
 import { useResize } from "../../../shared/hooks/useResize";
 import { CategoriesAdaptive } from "@/components/shared/categories-adaptive";
-import { useEffect } from "react";
 
 const Home = () => {
   const { categories, setDeliveryAddress } = useCategoryNav();

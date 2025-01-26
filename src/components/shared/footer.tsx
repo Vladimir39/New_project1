@@ -34,7 +34,7 @@ export const Footer: FC<Props> = ({ className }) => {
               </ul>
             </div>
             <div>
-              <CallButtonTel className="text-neutral-400 mt-5" />
+              <CallButtonTel className="invert" />
             </div>
           </div>
         </div>

@@ -16,5 +16,6 @@ export interface IProduct {
   };
   popular: boolean;
   countPopular: string;
+  availability: boolean;
   ingredients: Iingredients[];
 }
