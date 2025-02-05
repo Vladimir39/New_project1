@@ -22,7 +22,7 @@ export const CheckoutPersonalForm: FC<Props> = ({ className }) => {
       <FormTextarea
         name="comment"
         className="text-base"
-        placeholder="Комментарий к заказу"
+        placeholder="Комментарий к заказу например: код от домофона 1111"
       />
     </WhiteBlock>
   );

@@ -34,7 +34,10 @@ export const contact: DataFooter = {
   title: "Контакты",
   items: [
     { title: "+79659898988", link: "tel:+79659898988" },
-    { title: "Г. ХИМКИ, ПР-Т ЮБИЛЕЙНЫЙ, 33, СТР.1", link: "tel:+79659898988" },
+    {
+      title: "Г. ХИМКИ, ПР-Т ЮБИЛЕЙНЫЙ, 33/2, СТР.1",
+      link: "tel:+79659898988",
+    },
     { title: "+79619797977", link: "tel:+79619797977" },
     { title: "Г. ХИМКИ, ПР-Т МЕЛЬНИКОВА, 2Б, СТР.1", link: "tel:+79619797977" },
     { title: "admin@dimshashlik.ru", link: "mailto:admin@dimshashlik.ru" },

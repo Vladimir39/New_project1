@@ -22,557 +22,486 @@
     </categories>
     <offers>
       <offer id="0" available="true">
-        <url>https://example-restaurant.com/menu_item/barbecue/ШЕЙКА_СВИНАЯ.webp</url>
         <price>440</price>
         <currencyId>RUR</currencyId>
         <categoryId>2</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/barbecue/ШЕЙКА_СВИНАЯ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/barbecue/%D0%A8%D0%95%D0%99%D0%9A%D0%90_%D0%A1%D0%92%D0%98%D0%9D%D0%90%D0%AF.webp</picture>
         <name>Свиная шейка</name>
         <description>Сочный и ароматный шашлык из свиной шейки, приготовленный на углях с нежными специями</description>
       </offer>
       <offer id="1" available="true">
-        <url>https://example-restaurant.com/menu_item/barbecue/МЯКОТЬ_БАРАНИНА.webp</url>
         <price>699</price>
         <currencyId>RUR</currencyId>
         <categoryId>2</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/barbecue/МЯКОТЬ_БАРАНИНА.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/barbecue/%D0%9C%D0%AF%D0%9A%D0%9E%D0%A2%D0%AC_%D0%91%D0%90%D0%A0%D0%90%D0%9D%D0%98%D0%9D%D0%90.webp</picture>
         <name>Мякоть баранина</name>
         <description>Изысканный шашлык из нежной мякоти баранины, приправленный ароматными специями и обжаренный на углях</description>
       </offer>
       <offer id="2" available="true">
-        <url>https://example-restaurant.com/menu_item/barbecue/БЕДРО_КУРИНЫЕ.webp</url>
         <price>350</price>
         <currencyId>RUR</currencyId>
         <categoryId>2</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/barbecue/БЕДРО_КУРИНЫЕ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/barbecue/%D0%91%D0%95%D0%94%D0%A0%D0%9E_%D0%9A%D0%A3%D0%A0%D0%98%D0%9D%D0%AB%D0%95.webp</picture>
         <name>Куриное бедро</name>
         <description>Сочный шашлык с куриным бедром, приготовленный с травами и ароматными специями</description>
       </offer>
       <offer id="3" available="true">
-        <url>https://example-restaurant.com/menu_item/barbecue/РЕБРА_СВИНИНА.webp</url>
         <price>400</price>
         <currencyId>RUR</currencyId>
         <categoryId>2</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/barbecue/РЕБРА_СВИНИНА.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/barbecue/%D0%A0%D0%95%D0%91%D0%A0%D0%90_%D0%A1%D0%92%D0%98%D0%9D%D0%98%D0%9D%D0%90.webp</picture>
         <name>Свиные ребра</name>
         <description>Пикантный шашлык из свиных рёбер с пряными приправами и аппетитной хрустящей коркой</description>
       </offer>
       <offer id="4" available="true">
-        <url>https://example-restaurant.com/menu_item/barbecue/ФИЛЕ_ТЕЛЯТИНЫ.webp</url>
         <price>699</price>
         <currencyId>RUR</currencyId>
         <categoryId>2</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/barbecue/ФИЛЕ_ТЕЛЯТИНЫ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/barbecue/%D0%A4%D0%98%D0%9B%D0%95_%D0%A2%D0%95%D0%9B%D0%AF%D0%A2%D0%98%D0%9D%D0%AB.webp</picture>
         <name>Филе телятины</name>
         <description>Нежный шашлык из филе телятины, приправленный уникальными специями для неповторимого вкуса</description>
       </offer>
       <offer id="5" available="true">
-        <url>https://example-restaurant.com/menu_item/barbecue/КАРЕ_ЯГНЕНКА.webp</url>
         <price>699</price>
         <currencyId>RUR</currencyId>
         <categoryId>2</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/barbecue/КАРЕ_ЯГНЕНКА.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/barbecue/%D0%9A%D0%90%D0%A0%D0%95_%D0%AF%D0%93%D0%9D%D0%95%D0%9D%D0%9A%D0%90.webp</picture>
         <name>Корейка ягненка</name>
         <description>Эксклюзивный шашлык из корейки ягненка с насыщенными восточными пряностями и аппетитной коркой</description>
       </offer>
       <offer id="6" available="true">
-        <url>https://example-restaurant.com/menu_item/barbecue/РЕБРА_БАРАНИНА.webp</url>
         <price>500</price>
         <currencyId>RUR</currencyId>
         <categoryId>2</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/barbecue/РЕБРА_БАРАНИНА.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/barbecue/%D0%A0%D0%95%D0%91%D0%A0%D0%90_%D0%91%D0%90%D0%A0%D0%90%D0%9D%D0%98%D0%9D%D0%90.webp</picture>
         <name>Ребра баранина</name>
         <description>Ароматный шашлык из сочных рёбер баранины, пропитанный пряными специями и обжаренный на углях</description>
       </offer>
       <offer id="7" available="true">
-        <url>https://example-restaurant.com/menu_item/barbecue/КУРИНЫЕ_КРЫЛЬЯ.webp</url>
         <price>300</price>
         <currencyId>RUR</currencyId>
         <categoryId>2</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/barbecue/КУРИНЫЕ_КРЫЛЬЯ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/barbecue/%D0%9A%D0%A3%D0%A0%D0%98%D0%9D%D0%AB%D0%95_%D0%9A%D0%A0%D0%AB%D0%9B%D0%AC%D0%AF.webp</picture>
         <name>Куриные крылья</name>
         <description>Сочные куриные крылья, обжаренные до золотистой хрустящей корки, с аппетитными приправами</description>
       </offer>
       <offer id="8" available="true">
-        <url>https://example-restaurant.com/menu_item/barbecue/ФИЛЕ_КУРИНОЕ.webp</url>
         <price>370</price>
         <currencyId>RUR</currencyId>
         <categoryId>2</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/barbecue/ФИЛЕ_КУРИНОЕ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/barbecue/%D0%A4%D0%98%D0%9B%D0%95_%D0%9A%D0%A3%D0%A0%D0%98%D0%9D%D0%9E%D0%95.webp</picture>
         <name>Куриное филе</name>
         <description>Нежный шашлык из куриного филе с ароматными специями и золотистой коркой на углях</description>
       </offer>
       <offer id="9" available="true">
-        <url>https://example-restaurant.com/menu_item/barbecue/КРЫЛЬЯ_БАРБЕКЮ.webp</url>
         <price>320</price>
         <currencyId>RUR</currencyId>
         <categoryId>2</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/barbecue/КРЫЛЬЯ_БАРБЕКЮ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/barbecue/%D0%9A%D0%A0%D0%AB%D0%9B%D0%AC%D0%AF_%D0%91%D0%90%D0%A0%D0%91%D0%95%D0%9A%D0%AE.webp</picture>
         <name>Крылья барбекю</name>
         <description>Крылья барбекю – сочные и ароматные, обжаренные до идеальной хрустящей корки с барбекю-соусом</description>
       </offer>
       <offer id="10" available="true">
-        <url>https://example-restaurant.com/menu_item/barbecue/БЕДРО_ИНДЕЙКИ.webp</url>
         <price>450</price>
         <currencyId>RUR</currencyId>
         <categoryId>2</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/barbecue/БЕДРО_ИНДЕЙКИ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/barbecue/%D0%91%D0%95%D0%94%D0%A0%D0%9E_%D0%98%D0%9D%D0%94%D0%95%D0%99%D0%9A%D0%98.webp</picture>
         <name>Бедро индейки</name>
         <description>Нежный шашлык из индейки, приготовленное с травами и ароматными специями для непередаваемого вкуса</description>
       </offer>
       <offer id="11" available="true">
-        <url>https://example-restaurant.com/menu_item/barbecue/СЕРДЦЕ_ИНДЕЙКИ.webp</url>
         <price>400</price>
         <currencyId>RUR</currencyId>
         <categoryId>2</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/barbecue/СЕРДЦЕ_ИНДЕЙКИ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/barbecue/%D0%A1%D0%95%D0%A0%D0%94%D0%A6%D0%95_%D0%98%D0%9D%D0%94%D0%95%D0%99%D0%9A%D0%98.webp</picture>
         <name>Сердце индейки</name>
         <description>Утонченный шашлык из сердец индейки, пряно приправленный и приготовленный с искусством</description>
       </offer>
       <offer id="12" available="true">
-        <url>https://example-restaurant.com/menu_item/shawarma/ШАУРМА_КУРИЦА.webp</url>
         <price>200</price>
         <currencyId>RUR</currencyId>
         <categoryId>3</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/shawarma/ШАУРМА_КУРИЦА.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/shawarma/%D0%A8%D0%90%D0%A3%D0%A0%D0%9C%D0%90_%D0%9A%D0%A3%D0%A0%D0%98%D0%A6%D0%90.webp</picture>
         <name>C курицей</name>
         <description>Аппетитная шаурма с нежным куриным мясом и ароматными специями в пышном лаваше</description>
       </offer>
       <offer id="13" available="true">
-        <url>https://example-restaurant.com/menu_item/shawarma/ШАУРМА_СВИНИНА.webp</url>
         <price>250</price>
         <currencyId>RUR</currencyId>
         <categoryId>3</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/shawarma/ШАУРМА_СВИНИНА.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/shawarma/%D0%A8%D0%90%D0%A3%D0%A0%D0%9C%D0%90_%D0%A1%D0%92%D0%98%D0%9D%D0%98%D0%9D%D0%90.webp</picture>
         <name>Cо свининой</name>
         <description>Изысканная шаурма с ароматной свининой, специями и сочными овощами в лаваше</description>
       </offer>
       <offer id="14" available="true">
-        <url>https://example-restaurant.com/menu_item/shawarma/ШАУРМА_СВИНИНА.webp</url>
         <price>350</price>
         <currencyId>RUR</currencyId>
         <categoryId>3</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/shawarma/ШАУРМА_СВИНИНА.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/shawarma/%D0%A8%D0%90%D0%A3%D0%A0%D0%9C%D0%90_%D0%A1%D0%92%D0%98%D0%9D%D0%98%D0%9D%D0%90.webp</picture>
         <name>C говядиной</name>
         <description>Шаурма с нежной говядиной, оригинальными специями и сочными овощами в лаваше</description>
       </offer>
       <offer id="15" available="true">
-        <url>https://example-restaurant.com/menu_item/shawarma/ШАУРМА_СВИНИНА.webp</url>
         <price>350</price>
         <currencyId>RUR</currencyId>
         <categoryId>3</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/shawarma/ШАУРМА_СВИНИНА.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/shawarma/%D0%A8%D0%90%D0%A3%D0%A0%D0%9C%D0%90_%D0%A1%D0%92%D0%98%D0%9D%D0%98%D0%9D%D0%90.webp</picture>
         <name>C бараниной</name>
         <description>Ароматная шаурма с нежной бараниной, приправленная специями и укутанная в пышный лаваш</description>
       </offer>
       <offer id="16" available="true">
-        <url>https://example-restaurant.com/menu_item/shawarma/ШАУРМА_КУРИЦА.webp</url>
         <price>300</price>
         <currencyId>RUR</currencyId>
         <categoryId>3</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/shawarma/ШАУРМА_КУРИЦА.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/shawarma/%D0%A8%D0%90%D0%A3%D0%A0%D0%9C%D0%90_%D0%9A%D0%A3%D0%A0%D0%98%D0%A6%D0%90.webp</picture>
         <name>C индейкой</name>
         <description>Шаурма с нежным мясом индейки, ароматными специями и свежими овощами в лаваше</description>
       </offer>
       <offer id="17" available="true">
-        <url>https://example-restaurant.com/menu_item/lula_kebab/ГОВЯДИНА.webp</url>
         <price>350</price>
         <currencyId>RUR</currencyId>
         <categoryId>4</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/lula_kebab/ГОВЯДИНА.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/lula_kebab/%D0%93%D0%9E%D0%92%D0%AF%D0%94%D0%98%D0%9D%D0%90.webp</picture>
         <name>Говядина</name>
         <description>Изысканный люля-кебаб с нежной говядиной и оригинальными специями, приготовленный с любовью</description>
       </offer>
       <offer id="18" available="true">
-        <url>https://example-restaurant.com/menu_item/lula_kebab/БАРАНИНА.webp</url>
         <price>350</price>
         <currencyId>RUR</currencyId>
         <categoryId>4</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/lula_kebab/БАРАНИНА.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/lula_kebab/%D0%91%D0%90%D0%A0%D0%90%D0%9D%D0%98%D0%9D%D0%90.webp</picture>
         <name>Баранина</name>
         <description>Ароматный люля-кебаб с нежной бараниной и пряными специями, приготовленный с искусством</description>
       </offer>
       <offer id="19" available="true">
-        <url>https://example-restaurant.com/menu_item/lula_kebab/Люля_Курица.webp</url>
         <price>300</price>
         <currencyId>RUR</currencyId>
         <categoryId>4</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/lula_kebab/Люля_Курица.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/lula_kebab/%D0%9B%D1%8E%D0%BB%D1%8F_%D0%9A%D1%83%D1%80%D0%B8%D1%86%D0%B0.webp</picture>
         <name>Из курицы</name>
         <description>Легкий и аппетитный люля-кебаб из нежного куриного мяса, обогащенный специями</description>
       </offer>
-
       <offer id="20" available="true">
-        <url>https://example-restaurant.com/menu_item/lula_kebab/СВИНИНА.webp</url>
         <price>320</price>
         <currencyId>RUR</currencyId>
         <categoryId>4</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/lula_kebab/СВИНИНА.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/lula_kebab/%D0%A1%D0%92%D0%98%D0%9D%D0%98%D0%9D%D0%90.webp</picture>
         <name>Свинина</name>
         <description>Сочный люля-кебаб с нежной свининой и ароматными специями для истинных гурманов</description>
       </offer>
       <offer id="21" available="true">
-        <url>https://example-restaurant.com/menu_item/fish/ДОРАДО.webp</url>
         <price>699</price>
         <currencyId>RUR</currencyId>
         <categoryId>5</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/fish/ДОРАДО.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/fish/%D0%94%D0%9E%D0%A0%D0%90%D0%94%D0%9E.webp</picture>
         <name>Дорадо</name>
         <description>Дорадо на гриле – свежая рыба с идеальной хрустящей коркой и ароматом моря</description>
       </offer>
       <offer id="22" available="true">
-        <url>https://example-restaurant.com/menu_item/fish/СИБАС.webp</url>
         <price>699</price>
         <currencyId>RUR</currencyId>
         <categoryId>5</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/fish/СИБАС.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/fish/%D0%A1%D0%98%D0%91%D0%90%D0%A1.webp</picture>
         <name>Сибас</name>
         <description>Сибас на гриле - изысканно приготовленная свежая рыба с ароматом моря и нежной текстурой</description>
       </offer>
       <offer id="23" available="true">
-        <url>https://example-restaurant.com/menu_item/fish/СТЕЙК_СЕМГИ.webp</url>
         <price>799</price>
         <currencyId>RUR</currencyId>
         <categoryId>5</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/fish/СТЕЙК_СЕМГИ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/fish/%D0%A1%D0%A2%D0%95%D0%99%D0%9A_%D0%A1%D0%95%D0%9C%D0%93%D0%98.webp</picture>
         <name>Стейк семги</name>
         <description>Аппетитный стейк семги, приготовленный на гриле с нежной мякотью и интенсивным вкусом</description>
       </offer>
       <offer id="24" available="true">
-        <url>https://example-restaurant.com/menu_item/fish/СИБАС.webp</url>
         <price>699</price>
         <currencyId>RUR</currencyId>
         <categoryId>5</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/fish/СИБАС.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/fish/%D0%A1%D0%98%D0%91%D0%90%D0%A1.webp</picture>
         <name>Форель</name>
         <description>Форель на гриле – свежая рыба с хрустящей коркой и нежным морским вкусом</description>
       </offer>
       <offer id="25" available="true">
-        <url>https://example-restaurant.com/menu_item/garnish/ХАЧАПУРИ_НА_МАНГАЛЕ.webp</url>
         <price>500</price>
         <currencyId>RUR</currencyId>
         <categoryId>8</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/garnish/ХАЧАПУРИ_НА_МАНГАЛЕ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/garnish/%D0%A5%D0%90%D0%A7%D0%90%D0%9F%D0%A3%D0%A0%D0%98_%D0%9D%D0%90_%D0%9C%D0%90%D0%9D%D0%93%D0%90%D0%9B%D0%95.webp</picture>
         <name>Хачапури на мангале</name>
         <description>Интересное блюдо хачапури, готовящееся на мангале с сыром и ароматным тестом</description>
       </offer>
       <offer id="26" available="true">
-        <url>https://example-restaurant.com/menu_item/garnish/ГРИБЫ.webp</url>
         <price>190</price>
         <currencyId>RUR</currencyId>
         <categoryId>6</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/garnish/ГРИБЫ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/garnish/%D0%93%D0%A0%D0%98%D0%91%D0%AB.webp</picture>
         <name>Грибы</name>
         <description>Шампиньоны на гриле – ароматные грибы с нежным вкусом и золотистой коркой</description>
       </offer>
       <offer id="27" available="true">
-        <url>https://example-restaurant.com/menu_item/garnish/КАРТОШКА_НА_УГЛЯХ.webp</url>
         <price>100</price>
         <currencyId>RUR</currencyId>
         <categoryId>6</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/garnish/КАРТОШКА_НА_УГЛЯХ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/garnish/%D0%9A%D0%90%D0%A0%D0%A2%D0%9E%D0%A8%D0%9A%D0%90_%D0%9D%D0%90_%D0%A3%D0%93%D0%9B%D0%AF%D0%A5.webp</picture>
         <name>Картошка на углях</name>
         <description>Ароматная картошка, запеченная на углях, с хрустящей коркой и нежным внутренним слоем</description>
       </offer>
       <offer id="28" available="true">
-        <url>https://example-restaurant.com/menu_item/garnish/КАРТОШКА_С_КУРДЮКОМ.webp</url>
         <price>160</price>
         <currencyId>RUR</currencyId>
         <categoryId>6</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/garnish/КАРТОШКА_С_КУРДЮКОМ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/garnish/%D0%9A%D0%90%D0%A0%D0%A2%D0%9E%D0%A8%D0%9A%D0%90_%D0%A1_%D0%9A%D0%A3%D0%A0%D0%94%D0%AE%D0%9A%D0%9E%D0%9C.webp</picture>
         <name>Картошка с курдюком</name>
         <description>Картошка, приготовленная с курдюком на гриле, сочная и ароматная</description>
       </offer>
       <offer id="29" available="true">
-        <url>https://example-restaurant.com/menu_item/garnish/КАРТОШКА_С_САЛОМ.webp</url>
         <price>130</price>
         <currencyId>RUR</currencyId>
         <categoryId>6</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/garnish/КАРТОШКА_С_САЛОМ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/garnish/%D0%9A%D0%90%D0%A0%D0%A2%D0%9E%D0%A8%D0%9A%D0%90_%D0%A1_%D0%A1%D0%90%D0%9B%D0%9E%D0%9C.webp</picture>
         <name>Картошка с салом</name>
         <description>Картошка с салом, приготовленная на гриле, сочетает аромат сала и хрустящей картошки</description>
       </offer>
       <offer id="30" available="true">
-        <url>https://example-restaurant.com/menu_item/garnish/ОВОЩИ_НА_МАНГАЛЕ.webp</url>
         <price>350</price>
         <currencyId>RUR</currencyId>
         <categoryId>6</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/garnish/ОВОЩИ_НА_МАНГАЛЕ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/garnish/%D0%9E%D0%92%D0%9E%D0%A9%D0%98_%D0%9D%D0%90_%20%D0%9C%D0%90%D0%9D%D0%93%D0%90%D0%9B%D0%95.webp</picture>
         <name>Овощи на мангале</name>
         <description>Сочные овощи, готовые на мангале, со вкусом копченых углей и ароматными специями</description>
       </offer>
       <offer id="31" available="true">
-        <url>https://example-restaurant.com/menu_item/garnish/КАРТОШКА_С_БЕКОНОМ.webp</url>
         <price>350</price>
         <currencyId>RUR</currencyId>
         <categoryId>6</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/garnish/КАРТОШКА_С_БЕКОНОМ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/garnish/%D0%9A%D0%90%D0%A0%D0%A2%D0%9E%D0%A8%D0%9A%D0%90_%D0%A1_%20%D0%91%D0%95%D0%9A%D0%9E%D0%9D%D0%9E%D0%9C.webp</picture>
         <name>Картошка с беконом</name>
         <description>Картошка с беконом на гриле - сочетание хрустящей картошки и аромата обжаренного бекона</description>
       </offer>
       <offer id="32" available="true">
-        <url>https://example-restaurant.com/menu_item/Salad/ЦЕЗАРЬ.webp</url>
         <price>450</price>
         <currencyId>RUR</currencyId>
         <categoryId>7</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/Salad/ЦЕЗАРЬ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/Salad/%D0%A6%D0%95%D0%97%D0%90%D0%A0%D0%AC.webp</picture>
         <name>Цезарь с курицей</name>
         <description>Салат Цезарь с курицей - сочная куриная грудка и свежие листья с ароматным соусом</description>
       </offer>
       <offer id="33" available="true">
-        <url>https://example-restaurant.com/menu_item/Salad/ГРЕЧЕСКИЙ.webp</url>
         <price>450</price>
         <currencyId>RUR</currencyId>
         <categoryId>7</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/Salad/ГРЕЧЕСКИЙ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/Salad/%D0%93%D0%A0%D0%95%D0%A7%D0%95%D0%A1%D0%9A%D0%98%D0%99.webp</picture>
         <name>Греческий</name>
         <description>Греческий салат - сочные огурцы, помидоры, фета и маслины в ароматном соусе</description>
       </offer>
       <offer id="34" available="true">
-        <url>https://example-restaurant.com/menu_item/Salad/СВЕЖИЕ_ОВОЩИ.webp</url>
         <price>300</price>
         <currencyId>RUR</currencyId>
         <categoryId>7</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/Salad/СВЕЖИЕ_ОВОЩИ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/Salad/%D0%A1%D0%92%D0%95%D0%96%D0%98%D0%95_%D0%9E%D0%92%D0%9E%D0%A9%D0%98.webp</picture>
         <name>Свежие овощи</name>
         <description>Салат из свежих овощей - красочное сочетание свежести и натуральных вкусов</description>
       </offer>
       <offer id="35" available="true">
-        <url>https://example-restaurant.com/menu_item/Salad/ХОРОВАЦ.webp</url>
         <price>350</price>
         <currencyId>RUR</currencyId>
         <categoryId>7</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/Salad/ХОРОВАЦ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/Salad/%D0%A5%D0%9E%D0%A0%D0%9E%D0%92%D0%90%D0%A6.webp</picture>
         <name>Хоровац</name>
         <description>Салат Хоровац - вкусное сочетание огурцов, помидоров, лука и зелени с приправами</description>
       </offer>
       <offer id="36" available="true">
-        <url>https://example-restaurant.com/menu_item/bakery/ЛАВАШ.webp</url>
         <price>30</price>
         <currencyId>RUR</currencyId>
         <categoryId>8</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/bakery/ЛАВАШ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/bakery/%D0%9B%D0%90%D0%92%D0%90%D0%A8.webp</picture>
         <name>Лаваш</name>
         <description>Белый хлеб в виде тонкой лепёшки</description>
       </offer>
       <offer id="37" available="true">
-        <url>https://example-restaurant.com/menu_item/sauce/ТОМАТНЫЙ.webp</url>
         <price>50</price>
         <currencyId>RUR</currencyId>
         <categoryId>9</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/sauce/ТОМАТНЫЙ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/sauce/%D0%A2%D0%9E%D0%9C%D0%90%D0%A2%D0%9D%D0%AB%D0%99.webp</picture>
         <name>Томатный</name>
         <description>Томатный соус - классический, насыщенный и ароматный, идеально подходит для множества блюд</description>
       </offer>
       <offer id="38" available="true">
-        <url>https://example-restaurant.com/menu_item/sauce/ЧЕСНОЧНЫЙ.webp</url>
         <price>50</price>
         <currencyId>RUR</currencyId>
         <categoryId>9</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/sauce/ЧЕСНОЧНЫЙ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/sauce/%D0%A7%D0%95%D0%A1%D0%9D%D0%9E%D0%A7%D0%9D%D0%AB%D0%99.webp</picture>
         <name>Чесночный</name>
         <description>Чесночный соус - насыщенный вкус чеснока, идеально подходит к различным блюдам</description>
       </offer>
       <offer id="39" available="true">
-        <url>https://example-restaurant.com/menu_item/sauce/ТЕРИЯКИ.webp</url>
         <price>100</price>
         <currencyId>RUR</currencyId>
         <categoryId>9</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/sauce/ТЕРИЯКИ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/sauce/%D0%A7%D0%95%D0%A1%D0%9D%D0%9E%D0%A7%D0%9D%D0%AB%D0%99.webp</picture>
         <name>Терияки</name>
         <description>Соус Терияки - сладкий и соленый соус, придающий блюдам неповторимый вкус и аромат</description>
       </offer>
       <offer id="40" available="true">
-        <url>https://example-restaurant.com/menu_item/sauce/НАШАРАБ.webp</url>
         <price>100</price>
         <currencyId>RUR</currencyId>
         <categoryId>9</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/sauce/НАШАРАБ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/sauce/%D0%9D%D0%90%D0%A8%D0%90%D0%A0%D0%90%D0%91.webp</picture>
         <name>Нашараб</name>
         <description>Соус Нашараб - пикантное и ароматное сочетание специй, идеальное для мясных блюд</description>
       </offer>
       <offer id="41" available="true">
-        <url>https://example-restaurant.com/menu_item/sauce/ТКЕМАЛИ.webp</url>
         <price>100</price>
         <currencyId>RUR</currencyId>
         <categoryId>9</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/sauce/ТКЕМАЛИ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/sauce/%D0%A2%D0%9A%D0%95%D0%9C%D0%90%D0%9B%D0%98.webp</picture>
         <name>Ткемали</name>
         <description>Ткемали соус - кисло-сладкий соус с ароматом сливы, популярный в грузинской кухне</description>
       </offer>
       <offer id="42" available="true">
-        <url>https://example-restaurant.com/menu_item/bakery/ЛЕПЕШКА.webp</url>
         <price>70</price>
         <currencyId>RUR</currencyId>
         <categoryId>8</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/bakery/ЛЕПЕШКА.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/bakery/%D0%9B%D0%95%D0%9F%D0%95%D0%A8%D0%9A%D0%90.webp</picture>
         <name>Матнакаш</name>
         <description>Матнакаш из пшеничной муки различных сортов в форме толстой овальной или круглой лепёшки</description>
       </offer>
       <offer id="43" available="true">
-        <url>https://example-restaurant.com/menu_item/drinks/Сок_Добрый.webp</url>
         <price>50</price>
         <currencyId>RUR</currencyId>
         <categoryId>10</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/drinks/Сок_Добрый.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/drinks/%D0%A1%D0%BE%D0%BA_%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9.webp</picture>
         <name>Добрый яблоко</name>
         <description></description>
       </offer>
       <offer id="44" available="true">
-        <url>https://example-restaurant.com/menu_item/drinks/Fanta.webp</url>
         <price>110</price>
         <currencyId>RUR</currencyId>
         <categoryId>10</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/drinks/Fanta.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/drinks/Fanta.webp</picture>
         <name>Фанта</name>
         <description></description>
       </offer>
       <offer id="45" available="true">
-        <url>https://example-restaurant.com/menu_item/drinks/Coca-Cola.webp</url>
         <price>110</price>
         <currencyId>RUR</currencyId>
         <categoryId>10</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/drinks/Coca-Cola.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/drinks/Coca-Cola.webp</picture>
         <name>Кока-кола</name>
         <description></description>
       </offer>
       <offer id="46" available="true">
-        <url>https://example-restaurant.com/menu_item/drinks/Чай_Lipton.webp</url>
         <price>80</price>
         <currencyId>RUR</currencyId>
         <categoryId>10</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/drinks/Чай_Lipton.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/drinks/%D0%A7%D0%B0%D0%B9_Lipton.webp</picture>
         <name>Чай Липтон</name>
         <description></description>
       </offer>
       <offer id="47" available="true">
-        <url>https://example-restaurant.com/menu_item/drinks/Adrenalin_rush.webp</url>
         <price>125</price>
         <currencyId>RUR</currencyId>
         <categoryId>10</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/drinks/Adrenalin_rush.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/drinks/Adrenalin_rush.webp</picture>
         <name>Адреналин Раш</name>
         <description></description>
       </offer>
       <offer id="48" available="true">
-        <url>https://example-restaurant.com/menu_item/drinks/Adrenalin_rush.webp</url>
         <price>170</price>
         <currencyId>RUR</currencyId>
         <categoryId>10</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/drinks/Adrenalin_rush.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/drinks/Adrenalin_rush.webp</picture>
         <name>Адреналин Раш</name>
         <description></description>
       </offer>
       <offer id="49" available="true">
-        <url>https://example-restaurant.com/menu_item/drinks/Aqua.webp</url>
         <price>50</price>
         <currencyId>RUR</currencyId>
         <categoryId>10</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/drinks/Aqua.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/drinks/Aqua.webp</picture>
         <name>Аква газ.</name>
         <description></description>
       </offer>
       <offer id="50" available="true">
-        <url>https://example-restaurant.com/menu_item/drinks/Aqua_1.webp</url>
         <price>50</price>
         <currencyId>RUR</currencyId>
         <categoryId>10</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/drinks/Aqua_1.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/drinks/Aqua_1.webp</picture>
         <name>Аква</name>
         <description></description>
       </offer>
       <offer id="51" available="true">
-        <url>https://example-restaurant.com/menu_item/drinks/Coca-Cola03.webp</url>
         <price>100</price>
         <currencyId>RUR</currencyId>
         <categoryId>10</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/drinks/Coca-Cola03.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/drinks/Coca-Cola03.webp</picture>
         <name>Кока-кола</name>
         <description></description>
       </offer>
       <offer id="52" available="true">
-        <url>https://example-restaurant.com/menu_item/drinks/Pepsi03.webp</url>
         <price>100</price>
         <currencyId>RUR</currencyId>
         <categoryId>10</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/drinks/Pepsi03.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/drinks/Pepsi03.webp</picture>
         <name>Пепси</name>
         <description></description>
       </offer>
       <offer id="53" available="true">
-        <url>https://example-restaurant.com/menu_item/drinks/АСКАНИЯ.webp</url>
         <price>100</price>
         <currencyId>RUR</currencyId>
         <categoryId>10</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/drinks/АСКАНИЯ.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/drinks/%D0%90%D0%A1%D0%9A%D0%90%D0%9D%D0%98%D0%AF.webp</picture>
         <name>Аскания</name>
         <description></description>
       </offer>
       <offer id="54" available="true">
-        <url>https://example-restaurant.com/menu_item/drinks/Лимонад.webp</url>
         <price>150</price>
         <currencyId>RUR</currencyId>
         <categoryId>10</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/drinks/Лимонад.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/drinks/%D0%9B%D0%B8%D0%BC%D0%BE%D0%BD%D0%B0%D0%B4.webp</picture>
         <name>Натахтари</name>
         <description></description>
       </offer>
       <offer id="55" available="true">
-        <url>https://example-restaurant.com/menu_item/drinks/Тархун.webp</url>
         <price>130</price>
         <currencyId>RUR</currencyId>
         <categoryId>10</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/drinks/Тархун.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/drinks/%D0%A2%D0%B0%D1%80%D1%85%D1%83%D0%BD.webp</picture>
         <name>Тархун</name>
         <description></description>
       </offer>
       <offer id="56" available="true">
-        <url>https://example-restaurant.com/menu_item/garnish/ХАЧАПУРИ_НА_МАНГАЛЕ.webp</url>
-        <price>500</price>
-        <currencyId>RUR</currencyId>
-        <categoryId>1</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/garnish/ХАЧАПУРИ_НА_МАНГАЛЕ.webp</picture>
-        <name>Хачапури на мангале</name>
-        <description>Интересное блюдо хачапури, готовящееся на мангале с сыром и ароматным тестом</description>
-      </offer>
-      <offer id="57" available="true">
-        <url>https://example-restaurant.com/menu_item/set/set.webp</url>
         <price>9999</price>
         <currencyId>RUR</currencyId>
         <categoryId>1</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/set/set.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/set/set.webp</picture>
         <name>Сет из говядины и баранины</name>
         <description>3x корейка ягненка;\n2x филе телятины;\n2x мякоть баранина;\n3x ребра баранина;\n3x люля говядина;\n3x люля баранина;\n3x картошка с курдюком;\n2x овощи на мангале;\n2x лепешка;\n3x соус чесночный;\n3x соус томатный;</description>
       </offer>
-      <offer id="58" available="true">
-        <url>https://example-restaurant.com/menu_item/set/5.webp</url>
+      <offer id="57" available="true">
         <price>3699</price>
         <currencyId>RUR</currencyId>
         <categoryId>1</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/set/5.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/set/5.webp</picture>
         <name>Сет на 5 человек</name>
         <description>2x шейка;\n2x куриное филе;\n2x люля курица;\n2x люля свинина;\n2x картошка с салом;\n2x грибы;\n2x лепешка;\n2x соус чесночный;\n2x соус томатный;</description>
       </offer>
-      <offer id="59" available="true">
-        <url>https://example-restaurant.com/menu_item/set/10.webp</url>
+      <offer id="58" available="true">
         <price>7699</price>
         <currencyId>RUR</currencyId>
         <categoryId>1</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/set/10.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/set/10.webp</picture>
         <name>Сет на 10 человек</name>
         <description>5x шейка;\n2x куриное филе;\n2x куриное бедро;\n2x куриные крылья;\n3x люля курица;\n3x люля говядина;\n2x картошка на углях;\n2x овощи на мангале;\n2x грибы;\n3x лепешка;\n2x соус чесночный;\n2x соус томатный;</description>
       </offer>
-      <offer id="60" available="true">
-        <url>https://example-restaurant.com/menu_item/set/15.webp</url>
+      <offer id="59" available="true">
         <price>11499</price>
         <currencyId>RUR</currencyId>
         <categoryId>1</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/set/15.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/set/15.webp</picture>
         <name>Сет на 15 человек</name>
         <description>6x шейка;\n3x куриное филе;\n3x куриные крылья;\n3x куриное бедро;\n2x ребра баранина;\n2x люля курица;\n2x люля говядина;\n2x люля свинина;\n2x люля баранина;\n3x картошка на углях;\n3x овощи на мангале;\n3x грибы;\n3x лепешка;\n3x соус чесночный;\n3x соус томатный;</description>
       </offer>
-      <offer id="61" available="true">
-        <url>https://example-restaurant.com/menu_item/set/20.webp</url>
+      <offer id="60" available="true">
         <price>16699</price>
         <currencyId>RUR</currencyId>
         <categoryId>1</categoryId>
@@ -580,93 +509,83 @@
         <name>Сет на 20 человек</name>
         <description>8x шейка;\n3x филе телятины;\n3x куриное филе;\n3x куриное бедро;\n3x куриные крылья;\n3x ребра баранина;\n3x люля курица;\n3x люля говядина;\n3x люля свинина;\n3x люля баранина;\n4x картошка на углях;\n3x овощи на мангале;\n3x грибы;\n5x лепешка;\n5x соус чесночный;\n5x соус томатный;</description>
       </offer>
-      <offer id="62" available="true">
-        <url>https://example-restaurant.com/menu_item/Salad/Тайский.webp</url>
+      <offer id="61" available="true">
         <price>450</price>
         <currencyId>RUR</currencyId>
         <categoryId>7</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/Salad/Тайский.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/Salad/%D0%A2%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9.webp</picture>
         <name>Тайский</name>
         <description>Салат Тайский - пряный, хрустящий салат с сочными овощами и ароматными травами</description>
       </offer>
-      <offer id="63" available="true">
-        <url>https://example-restaurant.com/menu_item/Salad/Светофор.webp</url>
+      <offer id="62" available="true">
         <price>500</price>
         <currencyId>RUR</currencyId>
         <categoryId>7</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/Salad/Светофор.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/Salad/%D0%A1%D0%B2%D0%B5%D1%82%D0%BE%D1%84%D0%BE%D1%80.webp</picture>
         <name>Светофор</name>
         <description>Салат Светофор - Яркий, свежий салат с хрустящими овощами и насыщенными вкусами</description>
       </offer>
-      <offer id="64" available="true">
-        <url>https://example-restaurant.com/menu_item/Salad/ОвощнойБукет.webp</url>
+      <offer id="63" available="true">
         <price>490</price>
         <currencyId>RUR</currencyId>
         <categoryId>7</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/Salad/ОвощнойБукет.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/Salad/%D0%9E%D0%B2%D0%BE%D1%89%D0%BD%D0%BE%D0%B9%D0%91%D1%83%D0%BA%D0%B5%D1%82.webp</picture>
         <name>Овощной букет</name>
         <description>Салат Овощной букет - Свежий, хрустящий салат с яркими овощами, зеленью и легким соусом</description>
       </offer>
-      <offer id="65" available="true">
-        <url>https://example-restaurant.com/menu_item/bakery/ОсетинскийПирогСырЗелень.webp</url>
+      <offer id="64" available="true">
         <price>600</price>
         <currencyId>RUR</currencyId>
         <categoryId>8</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/bakery/ОсетинскийПирогСырЗелень.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/bakery/%D0%9E%D1%81%D0%B5%D1%82%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%D0%9F%D0%B8%D1%80%D0%BE%D0%B3%D0%A1%D1%8B%D1%80%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D1%8C.webp</picture>
         <name>Осетинский пирог сыр зелень</name>
         <description>Тонкий, румяный пирог с нежным сыром и ароматной зеленью внутри</description>
       </offer>
-      <offer id="66" available="true">
-        <url>https://example-restaurant.com/menu_item/bakery/ОсетинскийПирогДесертный.webp</url>
+      <offer id="65" available="true">
         <price>800</price>
         <currencyId>RUR</currencyId>
         <categoryId>8</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/bakery/ОсетинскийПирогДесертный.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/bakery/%D0%9E%D1%81%D0%B5%D1%82%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%D0%9F%D0%B8%D1%80%D0%BE%D0%B3%D0%94%D0%B5%D1%81%D0%B5%D1%80%D1%82%D0%BD%D1%8B%D0%B9.webp</picture>
         <name>Осетинский пирог десертный</name>
         <description>Нежный, сладкий пирог с фруктовой начинкой и золотистой хрустящей корочкой</description>
       </offer>
-      <offer id="67" available="true">
-        <url>https://example-restaurant.com/menu_item/bakery/ХачапуриПоМегрельски.webp</url>
+      <offer id="66" available="true">
         <price>600</price>
         <currencyId>RUR</currencyId>
         <categoryId>8</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/bakery/ХачапуриПоМегрельски.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/bakery/%D0%A5%D0%B0%D1%87%D0%B0%D0%BF%D1%83%D1%80%D0%B8%D0%9F%D0%BE%D0%9C%D0%B5%D0%B3%D1%80%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B8.webp</picture>
         <name>Хачапури по мегрельски</name>
         <description>Сырный, румяный хачапури с хрустящей корочкой и тянущейся сырной начинкой</description>
       </offer>
-      <offer id="68" available="true">
-        <url>https://example-restaurant.com/menu_item/bakery/ХачапуриЖульен.webp</url>
+      <offer id="67" available="true">
         <price>550</price>
         <currencyId>RUR</currencyId>
         <categoryId>8</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/bakery/ХачапуриЖульен.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/bakery/%D0%A5%D0%B0%D1%87%D0%B0%D0%BF%D1%83%D1%80%D0%B8%D0%96%D1%83%D0%BB%D1%8C%D0%B5%D0%BD.webp</picture>
         <name>Хачапури жульен</name>
         <description>Пышный хачапури, наполненный сливочным жульеном с грибами и растекающимся сыром</description>
       </offer>
-      <offer id="69" available="true">
-        <url>https://example-restaurant.com/menu_item/bakery/ХачапуриПоИмеретински.webp</url>
+      <offer id="68" available="true">
         <price>550</price>
         <currencyId>RUR</currencyId>
         <categoryId>8</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/bakery/ХачапуриПоИмеретински.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/bakery/%D0%A5%D0%B0%D1%87%D0%B0%D0%BF%D1%83%D1%80%D0%B8%D0%9F%D0%BE%D0%98%D0%BC%D0%B5%D1%80%D0%B5%D1%82%D0%B8%D0%BD%D1%81%D0%BA%D0%B8.webp</picture>
         <name>Хачапури по-имеретински</name>
         <description>Классический круглый хачапури с нежной, тянущейся сырной начинкой внутри мягкого теста</description>
       </offer>
-      <offer id="70" available="true">
-        <url>https://example-restaurant.com/menu_item/bakery/ХачапуриПоАджарски.webp</url>
+      <offer id="69" available="true">
         <price>500</price>
         <currencyId>RUR</currencyId>
         <categoryId>8</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/bakery/ХачапуриПоАджарски.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/bakery/%D0%A5%D0%B0%D1%87%D0%B0%D0%BF%D1%83%D1%80%D0%B8%D0%9F%D0%BE%D0%90%D0%B4%D0%B6%D0%B0%D1%80%D1%81%D0%BA%D0%B8.webp</picture>
         <name>Хачапури по-аджарски</name>
         <description>Лодочка из румяного теста, наполненная расплавленным сыром, с яйцом и маслом</description>
       </offer>
-      <offer id="71" available="true">
-        <url>https://example-restaurant.com/menu_item/bakery/Хинкали.webp</url>
+      <offer id="70" available="true">
         <price>100</price>
         <currencyId>RUR</currencyId>
         <categoryId>8</categoryId>
-        <picture>https://example-restaurant.com/images/menu_item/bakery/Хинкали.webp</picture>
+        <picture>https://dimshashlik.ru/images/menu_item/bakery/%D0%A5%D0%B8%D0%BD%D0%BA%D0%B0%D0%BB%D0%B8.webp</picture>
         <name>Хинкали - от 5 шт</name>
         <description>Сочные пельмени с пряным мясным фаршем и бульоном внутри.</description>
       </offer>

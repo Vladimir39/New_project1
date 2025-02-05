@@ -32,30 +32,32 @@ export const CheckoutDeliveryInForm: FC<Props> = ({
       </div>
       {deliveryData?.delivery === "Доставка" ? (
         <div className="font-bold flex flex-col gap-3">
-          <p>
+          <p className="border text-center rounded-sm p-2">
             <span>Адрес: </span>
             {deliveryData?.address}
           </p>
-          {deliveryData?.entrance === "" ? null : (
-            <p>
-              <span>Дом: </span> {deliveryData?.entrance}
-            </p>
-          )}
-          {deliveryData?.entrance === "" ? null : (
-            <p>
-              <span>Квартира: </span> {deliveryData?.entrance}
-            </p>
-          )}
-          {deliveryData?.entrance === "" ? null : (
-            <p>
-              <span>Подъезд: </span> {deliveryData?.entrance}
-            </p>
-          )}
-          {deliveryData?.floor === "" ? null : (
-            <p>
-              <span>Этаж: </span> {deliveryData?.floor}
-            </p>
-          )}
+          <div className="grid grid-cols-2 gap-5">
+            {deliveryData?.house === "" ? null : (
+              <p className="border text-center rounded-sm p-2">
+                <span>Дом: </span> {deliveryData?.house}
+              </p>
+            )}
+            {deliveryData?.flat === "" ? null : (
+              <p className="border text-center rounded-sm p-2">
+                <span>Квартира: </span> {deliveryData?.flat}
+              </p>
+            )}
+            {deliveryData?.entrance === "" ? null : (
+              <p className="border text-center rounded-sm p-2">
+                <span>Подъезд: </span> {deliveryData?.entrance}
+              </p>
+            )}
+            {deliveryData?.floor === "" ? null : (
+              <p className="border text-center rounded-sm p-2">
+                <span>Этаж: </span> {deliveryData?.floor}
+              </p>
+            )}
+          </div>
         </div>
       ) : null}
     </WhiteBlock>

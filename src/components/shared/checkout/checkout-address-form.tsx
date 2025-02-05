@@ -16,7 +16,8 @@ export const CheckoutAddressForm: FC<Props> = ({ className }) => {
     setValue("floor", "");
     setValue("home", "");
     setValue("flat", "");
-  }, []);
+    setValue("house", "");
+  }, [setValue]);
 
   return (
     <div className="flex flex-col gap-5 mt-10">
@@ -31,6 +32,11 @@ export const CheckoutAddressForm: FC<Props> = ({ className }) => {
         )}
       />
       <div className="grid grid-cols-2 gap-5 ">
+        <FormInput
+          name="house"
+          className="text-base"
+          placeholder="Номер дома"
+        />
         <FormInput name="flat" className="text-base" placeholder="Квартира" />
 
         <FormInput
@@ -38,7 +44,7 @@ export const CheckoutAddressForm: FC<Props> = ({ className }) => {
           className="text-base"
           placeholder="Подъезд"
         />
-        <FormInput name="code" className="text-base" placeholder="Код двери" />
+
         <FormInput name="floor" className="text-base" placeholder="Этаж" />
       </div>
     </div>

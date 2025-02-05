@@ -16,7 +16,7 @@ export const useDeliveryForm = () => {
       floor: "",
       delivery: "",
       address: "",
-      code: "",
+      house: "",
       flat: "",
     },
   });

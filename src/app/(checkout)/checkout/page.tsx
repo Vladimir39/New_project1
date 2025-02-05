@@ -89,7 +89,7 @@ const Page = () => {
                 />
               )}
 
-              <ChechoutTimeDelivery />
+              <ChechoutTimeDelivery deliveryData={deliveryData} />
             </div>
             {/* Правая часть */}
 

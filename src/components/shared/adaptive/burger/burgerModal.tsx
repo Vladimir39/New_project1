@@ -87,17 +87,17 @@ export const BurgerModal: FC<Props> = ({ className }) => {
           </Link>
         </div>
         <hr />
-        <h6 className="text-slate-300">точка 1</h6>
+        <h6 className="text-slate-300">Кафе №1</h6>
         <div className="flex gap-3">
           <MapPin />
-          <p>г. Химки, пр-т Юбилейный, 33, стр.1</p>
+          <p>г. Химки, пр-т Юбилейный, 33/2, стр.1</p>
         </div>
         <div className="flex gap-3">
           <Smartphone />
           <Link href="tel:+79659898988">+79659898988</Link>
         </div>
         <hr />
-        <h6 className="text-slate-300">точка 2</h6>
+        <h6 className="text-slate-300">Кафе №2</h6>
         <div className="flex gap-3">
           <MapPin />
           <p>г. Химки, Пр-т Мельникова, 2Б, стр.1</p>

@@ -1,6 +1,7 @@
 import { CircleCheck } from "lucide-react";
 import { cn } from "../../lib/utils";
 import React, { FC } from "react";
+import Image from "next/image";
 
 interface Props {
   name: string;
@@ -31,7 +32,14 @@ export const ProductSous: FC<Props> = ({
       {active && (
         <CircleCheck className="absolute top-2 right-2 text-primary" />
       )}
-      <img width={110} height={73} src={`/${imageUrl}`} />
+      <Image
+        src={`/${imageUrl}`}
+        className="h-[70px] w-[100px]"
+        width={100}
+        height={70}
+        alt={name}
+        loading="lazy"
+      />
       <span className="text-xs mb-1">{name}</span>
       <span className="font-bold">{price} ₽</span>
     </div>

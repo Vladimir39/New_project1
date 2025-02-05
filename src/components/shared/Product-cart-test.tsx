@@ -5,6 +5,7 @@ import React, { FC, useEffect, useState } from "react";
 import { Title } from "./title";
 import { Button } from "../ui";
 import { Plus } from "lucide-react";
+import Image from "next/image";
 
 interface Props {
   id: number;
@@ -24,31 +25,35 @@ export const ProductCardTest: FC<Props> = ({
   availability,
   className,
 }) => {
-  const time = new Date();
-  const hours = time.getHours();
   const [active, setActive] = useState<boolean>(false);
 
   useEffect(() => {
+    const hours = new Date().getHours();
     if (hours >= 11 && hours <= 23) {
       setActive(false);
     } else {
       setActive(true);
     }
-  }, [time]);
+  }, []);
 
   return (
     <article
       className={`${
-        availability === active ? `opacity-30 pointer-events-none` : ""
+        availability === true && active === true
+          ? `opacity-30 pointer-events-none`
+          : ""
       }`}
     >
       <Link href={`/product/${id}`}>
         <div className="relative transition ease-in-out  hover:-translate-y-1 hover:scale-102  duration-300">
           <div className="flex justify-center rounded-lg h-[230px]">
-            <img
-              className="w-[290px] h-[215px] rounded-lg "
+            <Image
+              className="rounded-lg "
               src={imageUrl}
+              width={290}
+              height={215}
               alt={name}
+              loading="lazy"
             />
           </div>
           <div className="flex justify-between h-[50px] absolute bottom-12">
@@ -66,12 +71,14 @@ export const ProductCardTest: FC<Props> = ({
               </span>
             </div>
             <Button variant="secondary" className="text-base font-bold">
-              {availability === active ? (
+              {availability === true && active === true ? (
                 ""
               ) : (
                 <Plus size={20} className="mr-1" />
               )}
-              {availability === active ? "C 11:00" : "Добавить"}
+              {availability === true && active === true
+                ? "C 11:00"
+                : "Добавить"}
             </Button>
           </div>
         </div>

@@ -6,7 +6,7 @@ interface Delivery {
     delivery: string;
     entrance?: string;
     floor?: string;
-    code?: string;
+    house: string;
     flat?: string;
     comment?: string;
   };
@@ -19,7 +19,7 @@ export const useCreateDeliveryOrder = create<Delivery>((set) => ({
     delivery: "",
     entrance: "",
     floor: "",
-    code: "",
+    house: "",
     flat: "",
     comment: "",
   },

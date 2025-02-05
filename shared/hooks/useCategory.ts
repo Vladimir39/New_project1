@@ -16,7 +16,7 @@ export const useCategoryNav = (): ReturnProps => {
         const y = x ? JSON.parse(x) : null;
         if (
           y?.delivery === "Самовывоз" &&
-          y?.address === "г. Химки, пр-т Юбилейный, 51, к.1"
+          y?.address === "г. Химки, пр-т Юбилейный, 33/2, стр.1"
         ) {
           return 0;
         } else {
@@ -31,7 +31,6 @@ export const useCategoryNav = (): ReturnProps => {
     async function fetchCategories() {
       try {
         const category = await Api.categories.getAll(deliveryAddress);
-        //console.log(category);
         setCategories(category);
       } catch (error) {
         console.log(error);

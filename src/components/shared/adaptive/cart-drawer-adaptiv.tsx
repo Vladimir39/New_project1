@@ -50,8 +50,8 @@ export const CartDrawerAdaptiv: React.FC<React.PropsWithChildren> = ({
             <>
               <DrawerHeader>
                 <DrawerTitle>
-                  В корзине{" "}
-                  <span className="font-bold">{items.length} позиции</span>
+                  Количество позиций:{" "}
+                  <span className="font-bold">{items.length}</span>
                 </DrawerTitle>
               </DrawerHeader>
             </>
@@ -63,6 +63,7 @@ export const CartDrawerAdaptiv: React.FC<React.PropsWithChildren> = ({
                 alt="Empty cart"
                 width={120}
                 height={120}
+                loading="lazy"
               />
               <Title
                 size="sm"

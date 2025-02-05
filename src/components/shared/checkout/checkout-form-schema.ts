@@ -12,7 +12,7 @@ export const checkoutFormSchema = z.object({
   address: z.string().min(5, { message: "Введите корректный адрес" }),
   delivery: z.string().min(5, { message: "Выберите способ доставки" }),
   time: z.string().min(3, { message: "Выберите время доставки" }),
-  code: z.string().optional(),
+  house: z.string().min(1, { message: "Введите номер дома" }),
   flat: z.string().optional(),
   entrance: z.string().optional(),
   floor: z.string().optional(),
@@ -22,7 +22,7 @@ export const checkoutFormSchema = z.object({
 export const deliveryFormSchema = z.object({
   address: z.string().min(5, { message: "Введите корректный адрес" }),
   delivery: z.string().min(5, { message: "Выберите способ доставки" }),
-  code: z.string().optional(),
+  house: z.string().min(1, { message: "Введите номер дома" }),
   flat: z.string().optional(),
   entrance: z.string().optional(),
   floor: z.string().optional(),

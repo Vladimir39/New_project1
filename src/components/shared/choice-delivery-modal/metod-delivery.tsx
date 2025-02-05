@@ -12,7 +12,7 @@ export const MetodDelivery: FC<Props> = ({ onClick, activeDelivery }) => {
   useEffect(() => {
     onClick("delivery");
     setValue("delivery", "Доставка");
-  }, []);
+  }, [setValue]);
 
   const handleValue = (metod: "delivery" | "pickup") => {
     onClick(metod);

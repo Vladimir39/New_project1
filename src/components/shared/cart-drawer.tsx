@@ -54,8 +54,8 @@ export const CartDrawer: FC<React.PropsWithChildren> = ({ children }) => {
             <>
               <SheetHeader>
                 <SheetTitle>
-                  В корзине{" "}
-                  <span className="font-bold">{items.length} позиции</span>
+                  Количество позиций:{" "}
+                  <span className="font-bold">{items.length}</span>
                 </SheetTitle>
               </SheetHeader>
             </>
@@ -68,6 +68,7 @@ export const CartDrawer: FC<React.PropsWithChildren> = ({ children }) => {
                 alt="Empty cart"
                 width={120}
                 height={120}
+                loading="lazy"
               />
               <Title
                 size="sm"

@@ -5,6 +5,7 @@ import React, { FC, useEffect, useState } from "react";
 import { Plus } from "lucide-react";
 import { Title } from "../title";
 import { Button } from "@/components/ui";
+import Image from "next/image";
 
 interface Props {
   id: number;
@@ -24,43 +25,48 @@ export const ProductCardAdaptive: FC<Props> = ({
   availability,
   className,
 }) => {
-  const time = new Date();
-  const hours = time.getHours();
   const [active, setActive] = useState<boolean>(false);
 
   useEffect(() => {
+    const hours = new Date().getHours();
+
     if (hours >= 11 && hours <= 23) {
       setActive(false);
     } else {
       setActive(true);
     }
-  }, [time]);
+  }, []);
 
   return (
     <article
       className={`${
-        availability === active ? `opacity-30 pointer-events-none` : ""
+        availability === true && active === true
+          ? `opacity-30 pointer-events-none`
+          : ""
       }`}
     >
       <Link href={`/product/${id}`}>
         <div className="flex">
           <div className="flex rounded-lg ">
-            <img
-              className="w-[150px] h-[100px] rounded-lg "
+            <Image
+              className="rounded-lg "
+              width={150}
+              height={100}
               src={imageUrl}
               alt={name}
+              loading="lazy"
             />
           </div>
 
           <div className="relative ml-6 h-[50px] w-[150px]">
             <Title text={name} size="xs" className=" font-bold " />
             <Button variant="secondary" className="absolute top-14 text-base ">
-              {availability === active ? (
+              {availability === true && active === true ? (
                 ""
               ) : (
                 <Plus size={20} className="mr-1" />
               )}
-              {availability === active ? (
+              {availability === true && active === true ? (
                 "C 11:00"
               ) : (
                 <span className="text-[14px] rounded-sm p-1 ml-2 text-black">

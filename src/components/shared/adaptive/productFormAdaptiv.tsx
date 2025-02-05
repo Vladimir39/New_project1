@@ -51,7 +51,8 @@ export const ProductFormAdaptiv: FC<Props> = ({
         images={productID?.images}
         price={productID?.price}
         ingredients={productID?.ingredients}
-        description={productID?.id}
+        id={productID?.id}
+        description={productID?.description}
         onSubmit={onSubmit}
         loading={loading}
       />

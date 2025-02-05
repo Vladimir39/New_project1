@@ -12,8 +12,6 @@ interface Props {
 }
 
 export const FormRadioGroup: FC<Props> = ({ name }) => {
-  const time = new Date();
-  const hours = time.getHours();
   const [activeTime, setActiveTime] = useState<boolean>(false);
   const {
     register,
@@ -25,18 +23,20 @@ export const FormRadioGroup: FC<Props> = ({ name }) => {
   const errorText = errors["address"]?.message as string;
 
   useEffect(() => {
-    if (hours >= 10 && hours <= 23) {
+    const hours = new Date().getHours();
+    if (hours >= 10 && hours < 23) {
       setActiveTime(false);
     } else {
       setActiveTime(true);
     }
-  }, [time]);
+  }, []);
 
   useEffect(() => {
     setValue("address", null);
-  }, []);
+  }, [setValue]);
 
   const activeHandler = (type: string) => {
+    setValue("house", "1");
     setValue("address", type, { shouldValidate: true });
     setActivePoint(type);
   };
@@ -48,7 +48,7 @@ export const FormRadioGroup: FC<Props> = ({ name }) => {
           <div key={index} className="flex items-center space-x-2 ">
             <RadioGroupItem
               disabled={
-                name === "г. Химки, пр-т Юбилейный, 33, стр.1"
+                name === "г. Химки, пр-т Юбилейный, 33/2, стр.1"
                   ? activeTime
                   : false
               }
@@ -56,7 +56,7 @@ export const FormRadioGroup: FC<Props> = ({ name }) => {
               id={name}
               className={`${activePoint === name ? "border-red-500" : " "}  ${
                 activeTime === true &&
-                name === "г. Химки, пр-т Юбилейный, 33, стр.1"
+                name === "г. Химки, пр-т Юбилейный, 33/2, стр.1"
                   ? "overflow-hidden bg-zinc-100"
                   : "hover:border-red-500"
               }`}
@@ -67,7 +67,7 @@ export const FormRadioGroup: FC<Props> = ({ name }) => {
               htmlFor={name}
               className={`flex text-base w-4/5 max-[500px]:text-sm text-balance cursor-pointer ${
                 activeTime === true &&
-                name === "г. Химки, пр-т Юбилейный, 33, стр.1"
+                name === "г. Химки, пр-т Юбилейный, 33/2, стр.1"
                   ? "text-zinc-200"
                   : ""
               }`}

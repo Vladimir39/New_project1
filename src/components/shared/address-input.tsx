@@ -10,10 +10,10 @@ export const AddressInput: React.FC<Props> = ({ onChange }) => {
     <AddressSuggestions
       token="23923b62535cf19fa8ff9a6303e2138eb3316e75"
       onChange={(data) => onChange?.(data?.value)}
-      defaultQuery="Химки"
       filterLocations={[{ region: "Москва" }, { city: "Химки" }]}
       filterFromBound="region"
-      filterToBound="house"
+      filterToBound="street"
+      count={5}
     />
   );
 };

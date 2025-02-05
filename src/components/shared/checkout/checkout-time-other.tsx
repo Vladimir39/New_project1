@@ -19,14 +19,17 @@ export const TimeOther: FC<Props> = ({
       {activePoint !== "timeOther" ? (
         <input
           type="button"
-          className="w-[130px] h-[40px] rounded-md cursor-pointer border text-center"
+          className="w-[130px] h-[40px] rounded-md cursor-pointer border text-center max-[360px]:w-full"
           value="Другое время"
-          onClick={() => setActivePoint("timeOther")}
+          onClick={() => {
+            setActivePoint("timeOther");
+            setValue("time", "");
+          }}
         />
       ) : (
         <input
           type="time"
-          className="w-[130px] h-[40px] rounded-md cursor-pointer bg-red-500 text-center"
+          className="w-[130px] h-[40px] rounded-md cursor-pointer bg-red-500 text-center max-[360px]:w-full"
           onChange={(e) => {
             setValue("time", e.target.value, { shouldValidate: true });
           }}

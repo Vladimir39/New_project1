@@ -23,6 +23,7 @@ export const Header: FC<Props> = ({ className }) => {
               height={60}
               alt="Лого"
               className="sm:w-[90px]"
+              loading="lazy"
             />
             <div>
               <h1 className="text-xl uppercase font-black sm:text-3xl">

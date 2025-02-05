@@ -41,7 +41,7 @@ export const ChoiceDeliveryModal: FC<ReturnProps> = ({
   const onSubmit = async (deliveryData: deliveryFormValues) => {
     if (
       deliveryData?.delivery === "Самовывоз" &&
-      deliveryData?.address === "г. Химки, пр-т Юбилейный, 51, к.1"
+      deliveryData?.address === "г. Химки, пр-т Юбилейный, 33/2, стр.1"
     ) {
       setDeliveryAddress(0);
     } else {
@@ -94,7 +94,7 @@ export const ChoiceDeliveryModal: FC<ReturnProps> = ({
             {activeDelivery === "pickup" ? (
               <FormRadioGroup
                 name={[
-                  "г. Химки, пр-т Юбилейный, 33, стр.1",
+                  "г. Химки, пр-т Юбилейный, 33/2, стр.1",
                   "г. Химки, пр-т Мельникова, 2Б, стр.1",
                 ]}
               />

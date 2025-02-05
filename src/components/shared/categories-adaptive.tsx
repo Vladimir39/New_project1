@@ -42,11 +42,12 @@ export const CategoriesAdaptive: FC<Props> = ({
     >
       <Container className="flex justify-between gap-2 max-xl:ml-5">
         <Swiper
+          slidesPerView={"auto"}
           breakpoints={{
             320: {
-              slidesPerView: 2.2,
+              slidesPerView: 2.8,
             },
-            360: {
+            380: {
               slidesPerView: 3.5,
             },
             550: {
@@ -74,7 +75,7 @@ export const CategoriesAdaptive: FC<Props> = ({
             <SwiperSlide key={id}>
               <a
                 className={cn(
-                  "flex justify-center mx-5",
+                  "flex justify-center",
                   linkClass,
                   activeCategoryId === id && activeLinkClass
                 )}
