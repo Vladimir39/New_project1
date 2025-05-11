@@ -17,6 +17,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { useCheckoutForm } from "../../../../shared/hooks/useCheckoutForm";
 import { useCreateDeliveryOrder } from "../../../../shared/store/dataDelivery";
+import { cookies } from "next/headers";
 
 const Page = () => {
   const [submitting, setSubmitting] = useState(false);

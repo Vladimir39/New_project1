@@ -26,7 +26,7 @@ export const ProductCard: FC<Props> = ({
         <div className="flex justify-center  rounded-lg h-[230px]">
           <Image
             width={290}
-            height={215}
+            height={200}
             className="w-[290px] h-[215px] rounded-lg"
             src={imageUrl}
             alt={name}

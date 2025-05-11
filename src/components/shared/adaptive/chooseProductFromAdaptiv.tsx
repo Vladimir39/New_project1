@@ -47,7 +47,7 @@ export const ChooseProductFromAdaptiv: FC<Props> = ({
   return (
     <div className={cn("px-6 static h-full", className)}>
       <div className="h-5/6 overflow-auto scrollbar">
-        <div className="m-auto mb-6 max-w-[300px]  bg-[#131313]">
+        <div className="m-auto mb-6 max-w-[300px]  bg-[#fff]">
           <Image
             src={images || ""}
             width={550}

@@ -49,7 +49,7 @@ export const ChooseProductFrom: FC<Props> = ({
 
   return (
     <div className={cn("flex flex-1", className)}>
-      <div className="flex justify-center items-center flex-1 relative w-full bg-[#131313]">
+      <div className="flex justify-center items-center flex-1 relative w-full bg-[#f7f6f5]">
         <Image
           src={images || ""}
           width={550}

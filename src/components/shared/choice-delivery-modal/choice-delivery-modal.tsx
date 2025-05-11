@@ -11,56 +11,45 @@ import { deliveryFormValues } from "../checkout/checkout-form-schema";
 import { useDeliveryForm } from "../../../../shared/hooks/useCheckoutForm";
 import { useCreateDeliveryOrder } from "../../../../shared/store/dataDelivery";
 import { Pencil } from "lucide-react";
-import { useCategoryNav } from "../../../../shared/hooks/useCategory";
 
 interface ReturnProps {
-  setDeliveryAddress: React.Dispatch<React.SetStateAction<number | undefined>>;
+  setDeliveryAddress?: React.Dispatch<React.SetStateAction<number | undefined>>;
 }
 
 export const ChoiceDeliveryModal: FC<ReturnProps> = ({
   setDeliveryAddress,
 }) => {
   const form = useDeliveryForm();
-  const [open, setOpen] = useState<boolean>(true);
-  const [Delivery, setDelivery] = useState<deliveryFormValues>();
+  const [open, setOpen] = useState<boolean>(false);
+  const [delivery, setDelivery] = useState<deliveryFormValues>();
   const { setDeliveryData } = useCreateDeliveryOrder();
   const [activeDelivery, setActiveDelivery] = useState<"delivery" | "pickup">(
     "delivery"
   );
 
-  // useEffect(() => {
-  //   const x = localStorage.getItem("delivery");
-  //   if (x) {
-  //     const y = JSON.parse(x!);
-  //     setDelivery(y);
-  //     setDeliveryData(y);
-  //     setOpen(false);
-  //   }
-  // }, []);
-
-  const onSubmit = async (deliveryData: deliveryFormValues) => {
-    if (
-      deliveryData?.delivery === "Самовывоз" &&
-      deliveryData?.address === "г. Химки, пр-т Юбилейный, 33/2, стр.1"
-    ) {
-      setDeliveryAddress(0);
-    } else {
-      setDeliveryAddress(1);
+  useEffect(() => {
+    const deliveryStorage = localStorage.getItem("delivery");
+    if (deliveryStorage) {
+      const deliveryParse = JSON.parse(deliveryStorage);
+      setDelivery(deliveryParse);
+      setDeliveryData(deliveryParse);
     }
+  }, []);
+  const onSubmit = async (deliveryData: deliveryFormValues) => {
     await setDeliveryData(deliveryData);
     await setDelivery(deliveryData);
-    localStorage.setItem("delivery", JSON.stringify(deliveryData));
+    //localStorage.setItem("delivery", JSON.stringify(deliveryData));
     setOpen(false);
   };
 
   return (
     <Dialog open={open}>
       <DialogTrigger asChild onClick={() => setOpen(true)}>
-        {Delivery ? (
+        {delivery ? (
           <div className="flex  gap-1 hover:text-primary cursor-pointer mb-5">
             <Pencil className="w-3 h-5" />
             <p className="font-bold text-sm">
-              {Delivery.delivery} : {Delivery.address}
+              {delivery.delivery} : {delivery.address}
             </p>
           </div>
         ) : (
@@ -75,6 +64,7 @@ export const ChoiceDeliveryModal: FC<ReturnProps> = ({
             className="flex flex-col justify-between h-full"
           >
             <MetodDelivery
+              className="text-black text-center"
               onClick={(method: "delivery" | "pickup") =>
                 setActiveDelivery(method)
               }

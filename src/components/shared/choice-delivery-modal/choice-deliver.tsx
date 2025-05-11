@@ -5,15 +5,7 @@ import { ErrorText } from "../error-text";
 import { FormInput } from "../form-components";
 
 export const ChoiceDeliver: FC = () => {
-  const { control, setValue } = useFormContext();
-
-  useEffect(() => {
-    setValue("entrance", "");
-    setValue("floor", "");
-    setValue("home", "");
-    setValue("flat", "");
-    setValue("house", "");
-  }, [setValue]);
+  const { control } = useFormContext();
 
   return (
     <div className="flex flex-col gap-5 mt-10">
@@ -22,7 +14,6 @@ export const ChoiceDeliver: FC = () => {
         name="address"
         render={({ field, fieldState: { error } }) => (
           <>
-            <p className="mb-[-18px] text-sm text-gray-500">Укажите улицу:</p>
             <AddressInput onChange={field.onChange} />
             {error?.message && <ErrorText text={error.message} />}
           </>

@@ -14,6 +14,11 @@ export const AddressInput: React.FC<Props> = ({ onChange }) => {
       filterFromBound="region"
       filterToBound="street"
       count={5}
+      inputProps={{
+        placeholder: "Город, улица",
+        className:
+          "h-12 w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-primary",
+      }}
     />
   );
 };

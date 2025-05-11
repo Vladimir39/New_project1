@@ -10,10 +10,11 @@ interface Order {
 export const createOrdersPost = async (
   address: CheckoutFormValues
 ): Promise<Order> => {
-  const token = await Cookies.get("cartToken");
+  //const token = await Cookies.get("cartToken");
   return (
     await axiosInstance.post("/orders", address, {
-      headers: { Authorization: `${token}` },
+      //headers: { Authorization: `${token}` },
+      withCredentials: true,
     })
   ).data;
 };

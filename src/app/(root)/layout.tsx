@@ -1,4 +1,3 @@
-import { Meta } from "../../../shared/utils/meta/meta";
 import { Footer, Header } from "../../components/shared";
 import { Metadata } from "next";
 

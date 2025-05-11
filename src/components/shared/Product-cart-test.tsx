@@ -46,12 +46,12 @@ export const ProductCardTest: FC<Props> = ({
     >
       <Link href={`/product/${id}`}>
         <div className="relative transition ease-in-out  hover:-translate-y-1 hover:scale-102  duration-300">
-          <div className="flex justify-center rounded-lg h-[230px]">
+          <div className="flex justify-center">
             <Image
-              className="rounded-lg "
+              className="max-w-[none]"
               src={imageUrl}
-              width={290}
-              height={215}
+              width={300}
+              height={200}
               alt={name}
               loading="lazy"
             />

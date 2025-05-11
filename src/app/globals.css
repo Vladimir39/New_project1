@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -50,4 +52,17 @@ html {
 
 .rc-time-picker-input {
   @apply bg-transparent border-none p-0 text-inherit shadow-none;
+}
+
+@font-face {
+  .anton-regular {
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .pattaya-regular {
+    font-family: "Pattaya", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 }

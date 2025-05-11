@@ -36,7 +36,7 @@ export const FormRadioGroup: FC<Props> = ({ name }) => {
   }, [setValue]);
 
   const activeHandler = (type: string) => {
-    setValue("house", "1");
+    setValue("house", "стр.1");
     setValue("address", type, { shouldValidate: true });
     setActivePoint(type);
   };
@@ -54,7 +54,9 @@ export const FormRadioGroup: FC<Props> = ({ name }) => {
               }
               value={name}
               id={name}
-              className={`${activePoint === name ? "border-red-500" : " "}  ${
+              className={`bg-white ${
+                activePoint === name ? "border-red-500 border-2" : " "
+              }  ${
                 activeTime === true &&
                 name === "г. Химки, пр-т Юбилейный, 33/2, стр.1"
                   ? "overflow-hidden bg-zinc-100"
@@ -65,7 +67,7 @@ export const FormRadioGroup: FC<Props> = ({ name }) => {
             />
             <Label
               htmlFor={name}
-              className={`flex text-base w-4/5 max-[500px]:text-sm text-balance cursor-pointer ${
+              className={`flex text-base max-[500px]:text-sm text-balance cursor-pointer ${
                 activeTime === true &&
                 name === "г. Химки, пр-т Юбилейный, 33/2, стр.1"
                   ? "text-zinc-200"
